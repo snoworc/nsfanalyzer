@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <Keyword>ManagedCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CLRSupport>true</CLRSupport>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CLRSupport>true</CLRSupport>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;/MT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;/MT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\nsfanalyzer\About.cpp" />
+    <ClCompile Include="..\nsfanalyzer\agent_data.cpp" />
+    <ClCompile Include="..\nsfanalyzer\AssemblyInfo.cpp" />
+    <ClCompile Include="..\nsfanalyzer\composite_data.cpp" />
+    <ClCompile Include="..\nsfanalyzer\Configuration.cpp" />
+    <ClCompile Include="..\nsfanalyzer\dlgDatabaseList.cpp" />
+    <ClCompile Include="..\nsfanalyzer\dlgServerList.cpp" />
+    <ClCompile Include="..\nsfanalyzer\generic_data.cpp" />
+    <ClCompile Include="..\nsfanalyzer\ListboxHandler.cpp" />
+    <ClCompile Include="..\nsfanalyzer\NoteClass.cpp" />
+    <ClCompile Include="..\nsfanalyzer\NoteClassTable.cpp" />
+    <ClCompile Include="..\nsfanalyzer\NSFAnalyzer.cpp" />
+    <ClCompile Include="..\nsfanalyzer\ScanIterator.cpp" />
+    <ClCompile Include="..\nsfanalyzer\ScanResult.cpp" />
+    <ClCompile Include="..\nsfanalyzer\search_core.cpp" />
+    <ClCompile Include="..\nsfanalyzer\stdafx.cpp" />
+    <ClCompile Include="agentdata.cpp" />
+    <ClCompile Include="analyze.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\nsfanalyzer\debug\BuildLog.htm" />
+    <None Include="..\nsfanalyzer\release\BuildLog.htm" />
+    <None Include="analyze.def" />
+    <None Include="debug\BuildLog.htm" />
+    <None Include="release\BuildLog.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\nsfanalyzer\About.h" />
+    <ClInclude Include="..\nsfanalyzer\Configuration.h" />
+    <ClInclude Include="..\nsfanalyzer\dlgDatabaseList.h" />
+    <ClInclude Include="..\nsfanalyzer\dlgServerList.h" />
+    <ClInclude Include="..\nsfanalyzer\ListboxHandler.h" />
+    <ClInclude Include="..\nsfanalyzer\NoteClass.h" />
+    <ClInclude Include="..\nsfanalyzer\NoteClassTable.h" />
+    <ClInclude Include="..\nsfanalyzer\NSFAnalyzerForm.h" />
+    <ClInclude Include="..\nsfanalyzer\resource.h" />
+    <ClInclude Include="..\nsfanalyzer\ScanIterator.h" />
+    <ClInclude Include="..\nsfanalyzer\ScanResult.h" />
+    <ClInclude Include="..\nsfanalyzer\search_core.h" />
+    <ClInclude Include="..\nsfanalyzer\stdafx.h" />
+    <ClInclude Include="analyze.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\nsfanalyzer\app.rc" />
+    <ResourceCompile Include="debug\Analyze_CAPI_manifest.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\nsfanalyzer\About.resx" />
+    <EmbeddedResource Include="..\nsfanalyzer\dlgDatabaseList.resx" />
+    <EmbeddedResource Include="..\nsfanalyzer\dlgServerList.resx" />
+    <EmbeddedResource Include="..\nsfanalyzer\NSFAnalyzerForm.resX" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NSFAnalyzer", "NSFAnalyzer\NSFAnalyzer.vcxproj", "{6CC72017-E753-4736-B022-41E8E23238C1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Analyze_CAPI", "Analyze_CAPI\Analyze_CAPI.vcxproj", "{C95EA577-4FEA-4929-A3D0-F24B65AA50BD}"
+EndProject
+Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "Install", "Install\Install.isproj", "{E45133BD-EE63-4883-8B3F-AAAC549563D9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6CC72017-E753-4736-B022-41E8E23238C1} = {6CC72017-E753-4736-B022-41E8E23238C1}
+		{C95EA577-4FEA-4929-A3D0-F24B65AA50BD} = {C95EA577-4FEA-4929-A3D0-F24B65AA50BD}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CD_ROM|Win32 = CD_ROM|Win32
+		Debug|Win32 = Debug|Win32
+		DVD-5|Win32 = DVD-5|Win32
+		Release|Win32 = Release|Win32
+		SingleImage|Win32 = SingleImage|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6CC72017-E753-4736-B022-41E8E23238C1}.CD_ROM|Win32.ActiveCfg = Template|Win32
+		{6CC72017-E753-4736-B022-41E8E23238C1}.CD_ROM|Win32.Build.0 = Template|Win32
+		{6CC72017-E753-4736-B022-41E8E23238C1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6CC72017-E753-4736-B022-41E8E23238C1}.Debug|Win32.Build.0 = Debug|Win32
+		{6CC72017-E753-4736-B022-41E8E23238C1}.DVD-5|Win32.ActiveCfg = Debug|Win32
+		{6CC72017-E753-4736-B022-41E8E23238C1}.DVD-5|Win32.Build.0 = Debug|Win32
+		{6CC72017-E753-4736-B022-41E8E23238C1}.Release|Win32.ActiveCfg = Release|Win32
+		{6CC72017-E753-4736-B022-41E8E23238C1}.Release|Win32.Build.0 = Release|Win32
+		{6CC72017-E753-4736-B022-41E8E23238C1}.SingleImage|Win32.ActiveCfg = Template|Win32
+		{6CC72017-E753-4736-B022-41E8E23238C1}.SingleImage|Win32.Build.0 = Template|Win32
+		{C95EA577-4FEA-4929-A3D0-F24B65AA50BD}.CD_ROM|Win32.ActiveCfg = Release|Win32
+		{C95EA577-4FEA-4929-A3D0-F24B65AA50BD}.CD_ROM|Win32.Build.0 = Release|Win32
+		{C95EA577-4FEA-4929-A3D0-F24B65AA50BD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C95EA577-4FEA-4929-A3D0-F24B65AA50BD}.Debug|Win32.Build.0 = Debug|Win32
+		{C95EA577-4FEA-4929-A3D0-F24B65AA50BD}.DVD-5|Win32.ActiveCfg = Debug|Win32
+		{C95EA577-4FEA-4929-A3D0-F24B65AA50BD}.DVD-5|Win32.Build.0 = Debug|Win32
+		{C95EA577-4FEA-4929-A3D0-F24B65AA50BD}.Release|Win32.ActiveCfg = Release|Win32
+		{C95EA577-4FEA-4929-A3D0-F24B65AA50BD}.Release|Win32.Build.0 = Release|Win32
+		{C95EA577-4FEA-4929-A3D0-F24B65AA50BD}.SingleImage|Win32.ActiveCfg = Release|Win32
+		{C95EA577-4FEA-4929-A3D0-F24B65AA50BD}.SingleImage|Win32.Build.0 = Release|Win32
+		{E45133BD-EE63-4883-8B3F-AAAC549563D9}.CD_ROM|Win32.ActiveCfg = CD_ROM
+		{E45133BD-EE63-4883-8B3F-AAAC549563D9}.CD_ROM|Win32.Build.0 = CD_ROM
+		{E45133BD-EE63-4883-8B3F-AAAC549563D9}.Debug|Win32.ActiveCfg = DVD-5
+		{E45133BD-EE63-4883-8B3F-AAAC549563D9}.Debug|Win32.Build.0 = DVD-5
+		{E45133BD-EE63-4883-8B3F-AAAC549563D9}.DVD-5|Win32.ActiveCfg = DVD-5
+		{E45133BD-EE63-4883-8B3F-AAAC549563D9}.DVD-5|Win32.Build.0 = DVD-5
+		{E45133BD-EE63-4883-8B3F-AAAC549563D9}.Release|Win32.ActiveCfg = SingleImage
+		{E45133BD-EE63-4883-8B3F-AAAC549563D9}.Release|Win32.Build.0 = SingleImage
+		{E45133BD-EE63-4883-8B3F-AAAC549563D9}.SingleImage|Win32.ActiveCfg = SingleImage
+		{E45133BD-EE63-4883-8B3F-AAAC549563D9}.SingleImage|Win32.Build.0 = SingleImage
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

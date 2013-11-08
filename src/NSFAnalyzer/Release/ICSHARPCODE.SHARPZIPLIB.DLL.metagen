@@ -1,0 +1,1719 @@
+ImageRuntimeVersion: v2.0.50727
+Assembly ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73: 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class ICSharpCode.SharpZipLib.BZip2.BZip2: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    Decompress(Stream, Stream, Boolean): PrivateScope, Public, Static, HideBySig
+    Compress(Stream, Stream, Boolean, Int32): PrivateScope, Public, Static, HideBySig
+Class ICSharpCode.SharpZipLib.SharpZipBaseException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.ApplicationException
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class ICSharpCode.SharpZipLib.BZip2.BZip2Exception: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :ICSharpCode.SharpZipLib.SharpZipBaseException
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class ICSharpCode.SharpZipLib.BZip2.BZip2InputStream: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.IO.Stream
+    Void .ctor(System.IO.Stream): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean IsStreamOwner 'get set' : 
+    Boolean CanRead 'get ' : 
+    Boolean CanSeek 'get ' : 
+    Boolean CanWrite 'get ' : 
+    Int64 Length 'get ' : 
+    Int64 Position 'get set' : 
+  Methods:
+    get_IsStreamOwner(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsStreamOwner(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_CanRead(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_CanSeek(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_CanWrite(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_Length(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_Position(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_Position(Int64): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    Flush(): PrivateScope, Public, Virtual, HideBySig
+    Seek(Int64, SeekOrigin): PrivateScope, Public, Virtual, HideBySig
+    SetLength(Int64): PrivateScope, Public, Virtual, HideBySig
+    Write(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+    WriteByte(Byte): PrivateScope, Public, Virtual, HideBySig
+    Read(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+    Close(): PrivateScope, Public, Virtual, HideBySig
+    ReadByte(): PrivateScope, Public, Virtual, HideBySig
+Class ICSharpCode.SharpZipLib.BZip2.BZip2OutputStream: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.IO.Stream
+    Void .ctor(System.IO.Stream): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.IO.Stream, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean IsStreamOwner 'get set' : 
+    Boolean CanRead 'get ' : 
+    Boolean CanSeek 'get ' : 
+    Boolean CanWrite 'get ' : 
+    Int64 Length 'get ' : 
+    Int64 Position 'get set' : 
+    Int32 BytesWritten 'get ' : 
+  Methods:
+    get_IsStreamOwner(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsStreamOwner(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_CanRead(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_CanSeek(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_CanWrite(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_Length(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_Position(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_Position(Int64): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    Seek(Int64, SeekOrigin): PrivateScope, Public, Virtual, HideBySig
+    SetLength(Int64): PrivateScope, Public, Virtual, HideBySig
+    ReadByte(): PrivateScope, Public, Virtual, HideBySig
+    Read(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+    Write(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+    WriteByte(Byte): PrivateScope, Public, Virtual, HideBySig
+    Close(): PrivateScope, Public, Virtual, HideBySig
+    get_BytesWritten(): PrivateScope, Public, HideBySig, SpecialName
+    Flush(): PrivateScope, Public, Virtual, HideBySig
+Interface ICSharpCode.SharpZipLib.Checksums.IChecksum: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    Int64 Value 'get ' : 
+  Methods:
+    get_Value(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Reset(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Update(Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Update(Byte[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Update(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class ICSharpCode.SharpZipLib.Checksums.Adler32: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICSharpCode.SharpZipLib.Checksums.IChecksum
+  Properties:
+    Int64 Value 'get ' : 
+  Methods:
+    get_Value(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Reset(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Update(Int32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Update(Byte[]): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Update(Byte[], Int32, Int32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class ICSharpCode.SharpZipLib.Checksums.Crc32: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICSharpCode.SharpZipLib.Checksums.IChecksum
+  Properties:
+    Int64 Value 'get set' : 
+  Methods:
+    get_Value(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Value(Int64): PrivateScope, Public, HideBySig, SpecialName
+    Reset(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Update(Int32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Update(Byte[]): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Update(Byte[], Int32, Int32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class ICSharpCode.SharpZipLib.Checksums.StrangeCRC: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICSharpCode.SharpZipLib.Checksums.IChecksum
+  Properties:
+    Int64 Value 'get ' : 
+  Methods:
+    Reset(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_Value(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Update(Int32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Update(Byte[]): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Update(Byte[], Int32, Int32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class ICSharpCode.SharpZipLib.Core.ScanEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Name 'get ' : 
+    Boolean ContinueRunning 'get set' : 
+  Methods:
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    get_ContinueRunning(): PrivateScope, Public, HideBySig, SpecialName
+    set_ContinueRunning(Boolean): PrivateScope, Public, HideBySig, SpecialName
+Class ICSharpCode.SharpZipLib.Core.ProgressEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(System.String, Int64, Int64): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Name 'get ' : 
+    Boolean ContinueRunning 'get set' : 
+    Single PercentComplete 'get ' : 
+    Int64 Processed 'get ' : 
+    Int64 Target 'get ' : 
+  Methods:
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    get_ContinueRunning(): PrivateScope, Public, HideBySig, SpecialName
+    set_ContinueRunning(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_PercentComplete(): PrivateScope, Public, HideBySig, SpecialName
+    get_Processed(): PrivateScope, Public, HideBySig, SpecialName
+    get_Target(): PrivateScope, Public, HideBySig, SpecialName
+Class ICSharpCode.SharpZipLib.Core.DirectoryEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ICSharpCode.SharpZipLib.Core.ScanEventArgs
+    Void .ctor(System.String, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean HasMatchingFiles 'get ' : 
+  Methods:
+    get_HasMatchingFiles(): PrivateScope, Public, HideBySig, SpecialName
+Class ICSharpCode.SharpZipLib.Core.ScanFailureEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Name 'get ' : 
+    System.Exception Exception 'get ' : 
+    Boolean ContinueRunning 'get set' : 
+  Methods:
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    get_Exception(): PrivateScope, Public, HideBySig, SpecialName
+    get_ContinueRunning(): PrivateScope, Public, HideBySig, SpecialName
+    set_ContinueRunning(Boolean): PrivateScope, Public, HideBySig, SpecialName
+Class ICSharpCode.SharpZipLib.Core.ProcessDirectoryHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Object, DirectoryEventArgs): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(Object, DirectoryEventArgs, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class ICSharpCode.SharpZipLib.Core.ProcessFileHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Object, ScanEventArgs): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(Object, ScanEventArgs, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class ICSharpCode.SharpZipLib.Core.ProgressHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Object, ProgressEventArgs): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(Object, ProgressEventArgs, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class ICSharpCode.SharpZipLib.Core.CompletedFileHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Object, ScanEventArgs): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(Object, ScanEventArgs, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class ICSharpCode.SharpZipLib.Core.DirectoryFailureHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Object, ScanFailureEventArgs): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(Object, ScanFailureEventArgs, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class ICSharpCode.SharpZipLib.Core.FileFailureHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Object, ScanFailureEventArgs): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(Object, ScanFailureEventArgs, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class ICSharpCode.SharpZipLib.Core.FileSystemScanner: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(ICSharpCode.SharpZipLib.Core.IScanFilter): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(ICSharpCode.SharpZipLib.Core.IScanFilter, ICSharpCode.SharpZipLib.Core.IScanFilter): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    ICSharpCode.SharpZipLib.Core.ProcessDirectoryHandler ProcessDirectory : Public
+    ICSharpCode.SharpZipLib.Core.ProcessFileHandler ProcessFile : Public
+    ICSharpCode.SharpZipLib.Core.CompletedFileHandler CompletedFile : Public
+    ICSharpCode.SharpZipLib.Core.DirectoryFailureHandler DirectoryFailure : Public
+    ICSharpCode.SharpZipLib.Core.FileFailureHandler FileFailure : Public
+  Methods:
+    Scan(String, Boolean): PrivateScope, Public, HideBySig
+Interface ICSharpCode.SharpZipLib.Core.INameTransform: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    TransformFile(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    TransformDirectory(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface ICSharpCode.SharpZipLib.Core.IScanFilter: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    IsMatch(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class ICSharpCode.SharpZipLib.Core.NameFilter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICSharpCode.SharpZipLib.Core.IScanFilter
+  Methods:
+    IsValidExpression(String): PrivateScope, Public, Static, HideBySig
+    IsValidFilterExpression(String): PrivateScope, Public, Static, HideBySig
+    SplitQuoted(String): PrivateScope, Public, Static, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    IsIncluded(String): PrivateScope, Public, HideBySig
+    IsExcluded(String): PrivateScope, Public, HideBySig
+    IsMatch(String): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class ICSharpCode.SharpZipLib.Core.PathFilter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICSharpCode.SharpZipLib.Core.IScanFilter
+  Methods:
+    IsMatch(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class ICSharpCode.SharpZipLib.Core.ExtendedPathFilter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ICSharpCode.SharpZipLib.Core.PathFilter
+    Void .ctor(System.String, Int64, Int64): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.DateTime, System.DateTime): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, Int64, Int64, System.DateTime, System.DateTime): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int64 MinSize 'get set' : 
+    Int64 MaxSize 'get set' : 
+    System.DateTime MinDate 'get set' : 
+    System.DateTime MaxDate 'get set' : 
+  Methods:
+    IsMatch(String): PrivateScope, Public, Virtual, HideBySig
+    get_MinSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_MinSize(Int64): PrivateScope, Public, HideBySig, SpecialName
+    get_MaxSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaxSize(Int64): PrivateScope, Public, HideBySig, SpecialName
+    get_MinDate(): PrivateScope, Public, HideBySig, SpecialName
+    set_MinDate(DateTime): PrivateScope, Public, HideBySig, SpecialName
+    get_MaxDate(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaxDate(DateTime): PrivateScope, Public, HideBySig, SpecialName
+Class ICSharpCode.SharpZipLib.Core.NameAndSizeFilter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit (Obsolete)
+  :ICSharpCode.SharpZipLib.Core.PathFilter
+    Void .ctor(System.String, Int64, Int64): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int64 MinSize 'get set' : 
+    Int64 MaxSize 'get set' : 
+  Methods:
+    IsMatch(String): PrivateScope, Public, Virtual, HideBySig
+    get_MinSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_MinSize(Int64): PrivateScope, Public, HideBySig, SpecialName
+    get_MaxSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaxSize(Int64): PrivateScope, Public, HideBySig, SpecialName
+Class ICSharpCode.SharpZipLib.Core.StreamUtils: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  Methods:
+    ReadFully(Stream, Byte[]): PrivateScope, Public, Static, HideBySig
+    ReadFully(Stream, Byte[], Int32, Int32): PrivateScope, Public, Static, HideBySig
+    Copy(Stream, Stream, Byte[]): PrivateScope, Public, Static, HideBySig
+    Copy(Stream, Stream, Byte[], ProgressHandler, TimeSpan, Object, String): PrivateScope, Public, Static, HideBySig
+    Copy(Stream, Stream, Byte[], ProgressHandler, TimeSpan, Object, String, Int64): PrivateScope, Public, Static, HideBySig
+Class ICSharpCode.SharpZipLib.Core.WindowsPathUtils: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  Methods:
+    DropPathRoot(String): PrivateScope, Public, Static, HideBySig
+Class ICSharpCode.SharpZipLib.Encryption.PkzipClassic: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  :System.Security.Cryptography.SymmetricAlgorithm
+  Methods:
+    GenerateKeys(Byte[]): PrivateScope, Public, Static, HideBySig
+Class ICSharpCode.SharpZipLib.Encryption.PkzipClassicManaged: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :ICSharpCode.SharpZipLib.Encryption.PkzipClassic
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 BlockSize 'get set' : 
+    System.Security.Cryptography.KeySizes[] LegalKeySizes 'get ' : 
+    System.Security.Cryptography.KeySizes[] LegalBlockSizes 'get ' : 
+    Byte[] Key 'get set' : 
+  Methods:
+    get_BlockSize(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_BlockSize(Int32): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_LegalKeySizes(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    GenerateIV(): PrivateScope, Public, Virtual, HideBySig
+    get_LegalBlockSizes(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_Key(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_Key(Byte[]): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    GenerateKey(): PrivateScope, Public, Virtual, HideBySig
+    CreateEncryptor(Byte[], Byte[]): PrivateScope, Public, Virtual, HideBySig
+    CreateDecryptor(Byte[], Byte[]): PrivateScope, Public, Virtual, HideBySig
+Class ICSharpCode.SharpZipLib.GZip.GZipConstants: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  Fields:
+    Int32 GZIP_MAGIC = 8075 : Public, Static, Literal, HasDefault
+    Int32 FTEXT = 1 : Public, Static, Literal, HasDefault
+    Int32 FHCRC = 2 : Public, Static, Literal, HasDefault
+    Int32 FEXTRA = 4 : Public, Static, Literal, HasDefault
+    Int32 FNAME = 8 : Public, Static, Literal, HasDefault
+    Int32 FCOMMENT = 16 : Public, Static, Literal, HasDefault
+Class ICSharpCode.SharpZipLib.GZip.GZipException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :ICSharpCode.SharpZipLib.SharpZipBaseException
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class ICSharpCode.SharpZipLib.Zip.Compression.Streams.InflaterInputStream: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.IO.Stream
+    Void .ctor(System.IO.Stream): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.IO.Stream, ICSharpCode.SharpZipLib.Zip.Compression.Inflater): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.IO.Stream, ICSharpCode.SharpZipLib.Zip.Compression.Inflater, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean IsStreamOwner 'get set' : 
+    Int32 Available 'get ' : 
+    Boolean CanRead 'get ' : 
+    Boolean CanSeek 'get ' : 
+    Boolean CanWrite 'get ' : 
+    Int64 Length 'get ' : 
+    Int64 Position 'get set' : 
+  Methods:
+    get_IsStreamOwner(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsStreamOwner(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    Skip(Int64): PrivateScope, Public, HideBySig
+    get_Available(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_CanRead(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_CanSeek(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_CanWrite(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_Length(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_Position(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_Position(Int64): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    Flush(): PrivateScope, Public, Virtual, HideBySig
+    Seek(Int64, SeekOrigin): PrivateScope, Public, Virtual, HideBySig
+    SetLength(Int64): PrivateScope, Public, Virtual, HideBySig
+    Write(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+    WriteByte(Byte): PrivateScope, Public, Virtual, HideBySig
+    BeginWrite(Byte[], Int32, Int32, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig
+    Close(): PrivateScope, Public, Virtual, HideBySig
+    Read(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+Class ICSharpCode.SharpZipLib.GZip.GZipInputStream: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ICSharpCode.SharpZipLib.Zip.Compression.Streams.InflaterInputStream
+    Void .ctor(System.IO.Stream): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.IO.Stream, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Read(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+Class ICSharpCode.SharpZipLib.Zip.Compression.Streams.DeflaterOutputStream: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.IO.Stream
+    Void .ctor(System.IO.Stream): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.IO.Stream, ICSharpCode.SharpZipLib.Zip.Compression.Deflater): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.IO.Stream, ICSharpCode.SharpZipLib.Zip.Compression.Deflater, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean IsStreamOwner 'get set' : 
+    Boolean CanPatchEntries 'get ' : 
+    System.String Password 'get set' : 
+    Boolean CanRead 'get ' : 
+    Boolean CanSeek 'get ' : 
+    Boolean CanWrite 'get ' : 
+    Int64 Length 'get ' : 
+    Int64 Position 'get set' : 
+  Methods:
+    Finish(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_IsStreamOwner(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsStreamOwner(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_CanPatchEntries(): PrivateScope, Public, HideBySig, SpecialName
+    get_Password(): PrivateScope, Public, HideBySig, SpecialName
+    set_Password(String): PrivateScope, Public, HideBySig, SpecialName
+    get_CanRead(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_CanSeek(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_CanWrite(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_Length(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_Position(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_Position(Int64): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    Seek(Int64, SeekOrigin): PrivateScope, Public, Virtual, HideBySig
+    SetLength(Int64): PrivateScope, Public, Virtual, HideBySig
+    ReadByte(): PrivateScope, Public, Virtual, HideBySig
+    Read(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+    BeginRead(Byte[], Int32, Int32, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig
+    BeginWrite(Byte[], Int32, Int32, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig
+    Flush(): PrivateScope, Public, Virtual, HideBySig
+    Close(): PrivateScope, Public, Virtual, HideBySig
+    WriteByte(Byte): PrivateScope, Public, Virtual, HideBySig
+    Write(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+Class ICSharpCode.SharpZipLib.GZip.GZipOutputStream: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ICSharpCode.SharpZipLib.Zip.Compression.Streams.DeflaterOutputStream
+    Void .ctor(System.IO.Stream): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.IO.Stream, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    SetLevel(Int32): PrivateScope, Public, HideBySig
+    GetLevel(): PrivateScope, Public, HideBySig
+    Write(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+    Close(): PrivateScope, Public, Virtual, HideBySig
+    Finish(): PrivateScope, Public, Virtual, HideBySig
+Class ICSharpCode.SharpZipLib.LZW.LzwConstants: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  Fields:
+    Int32 MAGIC = 8093 : Public, Static, Literal, HasDefault
+    Int32 MAX_BITS = 16 : Public, Static, Literal, HasDefault
+    Int32 BIT_MASK = 31 : Public, Static, Literal, HasDefault
+    Int32 EXTENDED_MASK = 32 : Public, Static, Literal, HasDefault
+    Int32 RESERVED_MASK = 96 : Public, Static, Literal, HasDefault
+    Int32 BLOCK_MODE_MASK = 128 : Public, Static, Literal, HasDefault
+    Int32 HDR_SIZE = 3 : Public, Static, Literal, HasDefault
+    Int32 INIT_BITS = 9 : Public, Static, Literal, HasDefault
+Class ICSharpCode.SharpZipLib.LZW.LzwException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :ICSharpCode.SharpZipLib.SharpZipBaseException
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class ICSharpCode.SharpZipLib.LZW.LzwInputStream: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.IO.Stream
+    Void .ctor(System.IO.Stream): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean IsStreamOwner 'get set' : 
+    Boolean CanRead 'get ' : 
+    Boolean CanSeek 'get ' : 
+    Boolean CanWrite 'get ' : 
+    Int64 Length 'get ' : 
+    Int64 Position 'get set' : 
+  Methods:
+    get_IsStreamOwner(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsStreamOwner(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    ReadByte(): PrivateScope, Public, Virtual, HideBySig
+    Read(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+    get_CanRead(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_CanSeek(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_CanWrite(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_Length(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_Position(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_Position(Int64): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    Flush(): PrivateScope, Public, Virtual, HideBySig
+    Seek(Int64, SeekOrigin): PrivateScope, Public, Virtual, HideBySig
+    SetLength(Int64): PrivateScope, Public, Virtual, HideBySig
+    Write(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+    WriteByte(Byte): PrivateScope, Public, Virtual, HideBySig
+    BeginWrite(Byte[], Int32, Int32, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig
+    Close(): PrivateScope, Public, Virtual, HideBySig
+Class ICSharpCode.SharpZipLib.Tar.TarException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :ICSharpCode.SharpZipLib.SharpZipBaseException
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class ICSharpCode.SharpZipLib.Tar.InvalidHeaderException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :ICSharpCode.SharpZipLib.Tar.TarException
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class ICSharpCode.SharpZipLib.Tar.ProgressMessageHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(TarArchive, TarEntry, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(TarArchive, TarEntry, String, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class ICSharpCode.SharpZipLib.Tar.TarArchive: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Interfaces:
+    System.IDisposable
+  Properties:
+    Boolean AsciiTranslate 'get set' : 
+    System.String PathPrefix 'get set' : 
+    System.String RootPath 'get set' : 
+    Boolean ApplyUserInfoOverrides 'get set' : 
+    Int32 UserId 'get ' : 
+    System.String UserName 'get ' : 
+    Int32 GroupId 'get ' : 
+    System.String GroupName 'get ' : 
+    Int32 RecordSize 'get ' : 
+    Boolean IsStreamOwner 'set' : 
+  Events:
+    ICSharpCode.SharpZipLib.Tar.ProgressMessageHandler ProgressMessageEvent: 
+  Methods:
+    add_ProgressMessageEvent(ProgressMessageHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ProgressMessageEvent(ProgressMessageHandler): PrivateScope, Public, HideBySig, SpecialName
+    CreateInputTarArchive(Stream): PrivateScope, Public, Static, HideBySig
+    CreateInputTarArchive(Stream, Int32): PrivateScope, Public, Static, HideBySig
+    CreateOutputTarArchive(Stream): PrivateScope, Public, Static, HideBySig
+    CreateOutputTarArchive(Stream, Int32): PrivateScope, Public, Static, HideBySig
+    SetKeepOldFiles(Boolean): PrivateScope, Public, HideBySig
+    get_AsciiTranslate(): PrivateScope, Public, HideBySig, SpecialName
+    set_AsciiTranslate(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    SetAsciiTranslation(Boolean): PrivateScope, Public, HideBySig (Obsolete)
+    get_PathPrefix(): PrivateScope, Public, HideBySig, SpecialName
+    set_PathPrefix(String): PrivateScope, Public, HideBySig, SpecialName
+    get_RootPath(): PrivateScope, Public, HideBySig, SpecialName
+    set_RootPath(String): PrivateScope, Public, HideBySig, SpecialName
+    SetUserInfo(Int32, String, Int32, String): PrivateScope, Public, HideBySig
+    get_ApplyUserInfoOverrides(): PrivateScope, Public, HideBySig, SpecialName
+    set_ApplyUserInfoOverrides(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_UserId(): PrivateScope, Public, HideBySig, SpecialName
+    get_UserName(): PrivateScope, Public, HideBySig, SpecialName
+    get_GroupId(): PrivateScope, Public, HideBySig, SpecialName
+    get_GroupName(): PrivateScope, Public, HideBySig, SpecialName
+    get_RecordSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsStreamOwner(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    CloseArchive(): PrivateScope, Public, HideBySig (Obsolete)
+    ListContents(): PrivateScope, Public, HideBySig
+    ExtractContents(String): PrivateScope, Public, HideBySig
+    WriteEntry(TarEntry, Boolean): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Close(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class ICSharpCode.SharpZipLib.Tar.TarBuffer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Fields:
+    Int32 BlockSize = 512 : Public, Static, Literal, HasDefault
+    Int32 DefaultBlockFactor = 20 : Public, Static, Literal, HasDefault
+    Int32 DefaultRecordSize = 10240 : Public, Static, Literal, HasDefault
+  Properties:
+    Int32 RecordSize 'get ' : 
+    Int32 BlockFactor 'get ' : 
+    Int32 CurrentBlock 'get ' : 
+    Boolean IsStreamOwner 'get set' : 
+    Int32 CurrentRecord 'get ' : 
+  Methods:
+    get_RecordSize(): PrivateScope, Public, HideBySig, SpecialName
+    GetRecordSize(): PrivateScope, Public, HideBySig (Obsolete)
+    get_BlockFactor(): PrivateScope, Public, HideBySig, SpecialName
+    GetBlockFactor(): PrivateScope, Public, HideBySig (Obsolete)
+    CreateInputTarBuffer(Stream): PrivateScope, Public, Static, HideBySig
+    CreateInputTarBuffer(Stream, Int32): PrivateScope, Public, Static, HideBySig
+    CreateOutputTarBuffer(Stream): PrivateScope, Public, Static, HideBySig
+    CreateOutputTarBuffer(Stream, Int32): PrivateScope, Public, Static, HideBySig
+    IsEOFBlock(Byte[]): PrivateScope, Public, HideBySig (Obsolete)
+    IsEndOfArchiveBlock(Byte[]): PrivateScope, Public, Static, HideBySig
+    SkipBlock(): PrivateScope, Public, HideBySig
+    ReadBlock(): PrivateScope, Public, HideBySig
+    get_CurrentBlock(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsStreamOwner(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsStreamOwner(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    GetCurrentBlockNum(): PrivateScope, Public, HideBySig (Obsolete)
+    get_CurrentRecord(): PrivateScope, Public, HideBySig, SpecialName
+    GetCurrentRecordNum(): PrivateScope, Public, HideBySig (Obsolete)
+    WriteBlock(Byte[]): PrivateScope, Public, HideBySig
+    WriteBlock(Byte[], Int32): PrivateScope, Public, HideBySig
+    Close(): PrivateScope, Public, HideBySig
+Class ICSharpCode.SharpZipLib.Tar.TarEntry: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Byte[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(ICSharpCode.SharpZipLib.Tar.TarHeader): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.ICloneable
+  Properties:
+    ICSharpCode.SharpZipLib.Tar.TarHeader TarHeader 'get ' : 
+    System.String Name 'get set' : 
+    Int32 UserId 'get set' : 
+    Int32 GroupId 'get set' : 
+    System.String UserName 'get set' : 
+    System.String GroupName 'get set' : 
+    System.DateTime ModTime 'get set' : 
+    System.String File 'get ' : 
+    Int64 Size 'get set' : 
+    Boolean IsDirectory 'get ' : 
+  Methods:
+    Clone(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    CreateTarEntry(String): PrivateScope, Public, Static, HideBySig
+    CreateEntryFromFile(String): PrivateScope, Public, Static, HideBySig
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    IsDescendent(TarEntry): PrivateScope, Public, HideBySig
+    get_TarHeader(): PrivateScope, Public, HideBySig, SpecialName
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    set_Name(String): PrivateScope, Public, HideBySig, SpecialName
+    get_UserId(): PrivateScope, Public, HideBySig, SpecialName
+    set_UserId(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_GroupId(): PrivateScope, Public, HideBySig, SpecialName
+    set_GroupId(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_UserName(): PrivateScope, Public, HideBySig, SpecialName
+    set_UserName(String): PrivateScope, Public, HideBySig, SpecialName
+    get_GroupName(): PrivateScope, Public, HideBySig, SpecialName
+    set_GroupName(String): PrivateScope, Public, HideBySig, SpecialName
+    SetIds(Int32, Int32): PrivateScope, Public, HideBySig
+    SetNames(String, String): PrivateScope, Public, HideBySig
+    get_ModTime(): PrivateScope, Public, HideBySig, SpecialName
+    set_ModTime(DateTime): PrivateScope, Public, HideBySig, SpecialName
+    get_File(): PrivateScope, Public, HideBySig, SpecialName
+    get_Size(): PrivateScope, Public, HideBySig, SpecialName
+    set_Size(Int64): PrivateScope, Public, HideBySig, SpecialName
+    get_IsDirectory(): PrivateScope, Public, HideBySig, SpecialName
+    GetFileTarHeader(TarHeader, String): PrivateScope, Public, HideBySig
+    GetDirectoryEntries(): PrivateScope, Public, HideBySig
+    WriteEntryHeader(Byte[]): PrivateScope, Public, HideBySig
+    AdjustEntryName(Byte[], String): PrivateScope, Public, Static, HideBySig
+    NameTarHeader(TarHeader, String): PrivateScope, Public, Static, HideBySig
+Class ICSharpCode.SharpZipLib.Tar.TarHeader: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.ICloneable
+  Fields:
+    Int32 NAMELEN = 100 : Public, Static, Literal, HasDefault
+    Int32 MODELEN = 8 : Public, Static, Literal, HasDefault
+    Int32 UIDLEN = 8 : Public, Static, Literal, HasDefault
+    Int32 GIDLEN = 8 : Public, Static, Literal, HasDefault
+    Int32 CHKSUMLEN = 8 : Public, Static, Literal, HasDefault
+    Int32 CHKSUMOFS = 148 : Public, Static, Literal, HasDefault
+    Int32 SIZELEN = 12 : Public, Static, Literal, HasDefault
+    Int32 MAGICLEN = 6 : Public, Static, Literal, HasDefault
+    Int32 VERSIONLEN = 2 : Public, Static, Literal, HasDefault
+    Int32 MODTIMELEN = 12 : Public, Static, Literal, HasDefault
+    Int32 UNAMELEN = 32 : Public, Static, Literal, HasDefault
+    Int32 GNAMELEN = 32 : Public, Static, Literal, HasDefault
+    Int32 DEVLEN = 8 : Public, Static, Literal, HasDefault
+    Byte LF_OLDNORM = 0 : Public, Static, Literal, HasDefault
+    Byte LF_NORMAL = 48 : Public, Static, Literal, HasDefault
+    Byte LF_LINK = 49 : Public, Static, Literal, HasDefault
+    Byte LF_SYMLINK = 50 : Public, Static, Literal, HasDefault
+    Byte LF_CHR = 51 : Public, Static, Literal, HasDefault
+    Byte LF_BLK = 52 : Public, Static, Literal, HasDefault
+    Byte LF_DIR = 53 : Public, Static, Literal, HasDefault
+    Byte LF_FIFO = 54 : Public, Static, Literal, HasDefault
+    Byte LF_CONTIG = 55 : Public, Static, Literal, HasDefault
+    Byte LF_GHDR = 103 : Public, Static, Literal, HasDefault
+    Byte LF_XHDR = 120 : Public, Static, Literal, HasDefault
+    Byte LF_ACL = 65 : Public, Static, Literal, HasDefault
+    Byte LF_GNU_DUMPDIR = 68 : Public, Static, Literal, HasDefault
+    Byte LF_EXTATTR = 69 : Public, Static, Literal, HasDefault
+    Byte LF_META = 73 : Public, Static, Literal, HasDefault
+    Byte LF_GNU_LONGLINK = 75 : Public, Static, Literal, HasDefault
+    Byte LF_GNU_LONGNAME = 76 : Public, Static, Literal, HasDefault
+    Byte LF_GNU_MULTIVOL = 77 : Public, Static, Literal, HasDefault
+    Byte LF_GNU_NAMES = 78 : Public, Static, Literal, HasDefault
+    Byte LF_GNU_SPARSE = 83 : Public, Static, Literal, HasDefault
+    Byte LF_GNU_VOLHDR = 86 : Public, Static, Literal, HasDefault
+    System.String TMAGIC = ustar  : Public, Static, Literal, HasDefault
+    System.String GNU_TMAGIC = ustar   : Public, Static, Literal, HasDefault
+  Properties:
+    System.String Name 'get set' : 
+    Int32 Mode 'get set' : 
+    Int32 UserId 'get set' : 
+    Int32 GroupId 'get set' : 
+    Int64 Size 'get set' : 
+    System.DateTime ModTime 'get set' : 
+    Int32 Checksum 'get ' : 
+    Boolean IsChecksumValid 'get ' : 
+    Byte TypeFlag 'get set' : 
+    System.String LinkName 'get set' : 
+    System.String Magic 'get set' : 
+    System.String Version 'get set' : 
+    System.String UserName 'get set' : 
+    System.String GroupName 'get set' : 
+    Int32 DevMajor 'get set' : 
+    Int32 DevMinor 'get set' : 
+  Methods:
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    set_Name(String): PrivateScope, Public, HideBySig, SpecialName
+    GetName(): PrivateScope, Public, HideBySig (Obsolete)
+    get_Mode(): PrivateScope, Public, HideBySig, SpecialName
+    set_Mode(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_UserId(): PrivateScope, Public, HideBySig, SpecialName
+    set_UserId(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_GroupId(): PrivateScope, Public, HideBySig, SpecialName
+    set_GroupId(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Size(): PrivateScope, Public, HideBySig, SpecialName
+    set_Size(Int64): PrivateScope, Public, HideBySig, SpecialName
+    get_ModTime(): PrivateScope, Public, HideBySig, SpecialName
+    set_ModTime(DateTime): PrivateScope, Public, HideBySig, SpecialName
+    get_Checksum(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsChecksumValid(): PrivateScope, Public, HideBySig, SpecialName
+    get_TypeFlag(): PrivateScope, Public, HideBySig, SpecialName
+    set_TypeFlag(Byte): PrivateScope, Public, HideBySig, SpecialName
+    get_LinkName(): PrivateScope, Public, HideBySig, SpecialName
+    set_LinkName(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Magic(): PrivateScope, Public, HideBySig, SpecialName
+    set_Magic(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Version(): PrivateScope, Public, HideBySig, SpecialName
+    set_Version(String): PrivateScope, Public, HideBySig, SpecialName
+    get_UserName(): PrivateScope, Public, HideBySig, SpecialName
+    set_UserName(String): PrivateScope, Public, HideBySig, SpecialName
+    get_GroupName(): PrivateScope, Public, HideBySig, SpecialName
+    set_GroupName(String): PrivateScope, Public, HideBySig, SpecialName
+    get_DevMajor(): PrivateScope, Public, HideBySig, SpecialName
+    set_DevMajor(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_DevMinor(): PrivateScope, Public, HideBySig, SpecialName
+    set_DevMinor(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Clone(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    ParseBuffer(Byte[]): PrivateScope, Public, HideBySig
+    WriteHeader(Byte[]): PrivateScope, Public, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    ParseOctal(Byte[], Int32, Int32): PrivateScope, Public, Static, HideBySig
+    ParseName(Byte[], Int32, Int32): PrivateScope, Public, Static, HideBySig
+    GetNameBytes(StringBuilder, Int32, Byte[], Int32, Int32): PrivateScope, Public, Static, HideBySig
+    GetNameBytes(String, Int32, Byte[], Int32, Int32): PrivateScope, Public, Static, HideBySig
+    GetNameBytes(StringBuilder, Byte[], Int32, Int32): PrivateScope, Public, Static, HideBySig
+    GetNameBytes(String, Byte[], Int32, Int32): PrivateScope, Public, Static, HideBySig
+    GetAsciiBytes(String, Int32, Byte[], Int32, Int32): PrivateScope, Public, Static, HideBySig
+    GetOctalBytes(Int64, Byte[], Int32, Int32): PrivateScope, Public, Static, HideBySig
+    GetLongOctalBytes(Int64, Byte[], Int32, Int32): PrivateScope, Public, Static, HideBySig
+Class ICSharpCode.SharpZipLib.Tar.TarInputStream: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.IO.Stream
+    Void .ctor(System.IO.Stream): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.IO.Stream, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean IsStreamOwner 'get set' : 
+    Boolean CanRead 'get ' : 
+    Boolean CanSeek 'get ' : 
+    Boolean CanWrite 'get ' : 
+    Int64 Length 'get ' : 
+    Int64 Position 'get set' : 
+    Int32 RecordSize 'get ' : 
+    Int64 Available 'get ' : 
+    Boolean IsMarkSupported 'get ' : 
+  Methods:
+    get_IsStreamOwner(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsStreamOwner(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_CanRead(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_CanSeek(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_CanWrite(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_Length(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_Position(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_Position(Int64): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    Flush(): PrivateScope, Public, Virtual, HideBySig
+    Seek(Int64, SeekOrigin): PrivateScope, Public, Virtual, HideBySig
+    SetLength(Int64): PrivateScope, Public, Virtual, HideBySig
+    Write(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+    WriteByte(Byte): PrivateScope, Public, Virtual, HideBySig
+    ReadByte(): PrivateScope, Public, Virtual, HideBySig
+    Read(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+    Close(): PrivateScope, Public, Virtual, HideBySig
+    SetEntryFactory(IEntryFactory): PrivateScope, Public, HideBySig
+    get_RecordSize(): PrivateScope, Public, HideBySig, SpecialName
+    GetRecordSize(): PrivateScope, Public, HideBySig (Obsolete)
+    get_Available(): PrivateScope, Public, HideBySig, SpecialName
+    Skip(Int64): PrivateScope, Public, HideBySig
+    get_IsMarkSupported(): PrivateScope, Public, HideBySig, SpecialName
+    Mark(Int32): PrivateScope, Public, HideBySig
+    Reset(): PrivateScope, Public, HideBySig
+    GetNextEntry(): PrivateScope, Public, HideBySig
+    CopyEntryContents(Stream): PrivateScope, Public, HideBySig
+Interface ICSharpCode.SharpZipLib.Tar.TarInputStream+IEntryFactory: AutoLayout, AnsiClass, Class, NestedPublic, ClassSemanticsMask, Abstract
+  Methods:
+    CreateEntry(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CreateEntryFromFile(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CreateEntry(Byte[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class ICSharpCode.SharpZipLib.Tar.TarInputStream+EntryFactoryAdapter: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICSharpCode.SharpZipLib.Tar.TarInputStream+IEntryFactory
+  Methods:
+    CreateEntry(String): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    CreateEntryFromFile(String): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    CreateEntry(Byte[]): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class ICSharpCode.SharpZipLib.Tar.TarOutputStream: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.IO.Stream
+    Void .ctor(System.IO.Stream): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.IO.Stream, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean IsStreamOwner 'get set' : 
+    Boolean CanRead 'get ' : 
+    Boolean CanSeek 'get ' : 
+    Boolean CanWrite 'get ' : 
+    Int64 Length 'get ' : 
+    Int64 Position 'get set' : 
+    Int32 RecordSize 'get ' : 
+  Methods:
+    get_IsStreamOwner(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsStreamOwner(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_CanRead(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_CanSeek(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_CanWrite(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_Length(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_Position(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_Position(Int64): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    Seek(Int64, SeekOrigin): PrivateScope, Public, Virtual, HideBySig
+    SetLength(Int64): PrivateScope, Public, Virtual, HideBySig
+    ReadByte(): PrivateScope, Public, Virtual, HideBySig
+    Read(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+    Flush(): PrivateScope, Public, Virtual, HideBySig
+    Finish(): PrivateScope, Public, HideBySig
+    Close(): PrivateScope, Public, Virtual, HideBySig
+    get_RecordSize(): PrivateScope, Public, HideBySig, SpecialName
+    GetRecordSize(): PrivateScope, Public, HideBySig (Obsolete)
+    PutNextEntry(TarEntry): PrivateScope, Public, HideBySig
+    CloseEntry(): PrivateScope, Public, HideBySig
+    WriteByte(Byte): PrivateScope, Public, Virtual, HideBySig
+    Write(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+Class ICSharpCode.SharpZipLib.Zip.Compression.Streams.InflaterInputBuffer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.IO.Stream): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.IO.Stream, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 RawLength 'get ' : 
+    Byte[] RawData 'get ' : 
+    Int32 ClearTextLength 'get ' : 
+    Byte[] ClearText 'get ' : 
+    Int32 Available 'get set' : 
+    System.Security.Cryptography.ICryptoTransform CryptoTransform 'set' : 
+  Methods:
+    get_RawLength(): PrivateScope, Public, HideBySig, SpecialName
+    get_RawData(): PrivateScope, Public, HideBySig, SpecialName
+    get_ClearTextLength(): PrivateScope, Public, HideBySig, SpecialName
+    get_ClearText(): PrivateScope, Public, HideBySig, SpecialName
+    get_Available(): PrivateScope, Public, HideBySig, SpecialName
+    set_Available(Int32): PrivateScope, Public, HideBySig, SpecialName
+    SetInflaterInput(Inflater): PrivateScope, Public, HideBySig
+    Fill(): PrivateScope, Public, HideBySig
+    ReadRawBuffer(Byte[]): PrivateScope, Public, HideBySig
+    ReadRawBuffer(Byte[], Int32, Int32): PrivateScope, Public, HideBySig
+    ReadClearTextBuffer(Byte[], Int32, Int32): PrivateScope, Public, HideBySig
+    ReadLeByte(): PrivateScope, Public, HideBySig
+    ReadLeShort(): PrivateScope, Public, HideBySig
+    ReadLeInt(): PrivateScope, Public, HideBySig
+    ReadLeLong(): PrivateScope, Public, HideBySig
+    set_CryptoTransform(ICryptoTransform): PrivateScope, Public, HideBySig, SpecialName
+Class ICSharpCode.SharpZipLib.Zip.Compression.Streams.OutputWindow: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Write(Int32): PrivateScope, Public, HideBySig
+    Repeat(Int32, Int32): PrivateScope, Public, HideBySig
+    CopyStored(StreamManipulator, Int32): PrivateScope, Public, HideBySig
+    CopyDict(Byte[], Int32, Int32): PrivateScope, Public, HideBySig
+    GetFreeSpace(): PrivateScope, Public, HideBySig
+    GetAvailable(): PrivateScope, Public, HideBySig
+    CopyOutput(Byte[], Int32, Int32): PrivateScope, Public, HideBySig
+    Reset(): PrivateScope, Public, HideBySig
+Class ICSharpCode.SharpZipLib.Zip.Compression.Streams.StreamManipulator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 AvailableBits 'get ' : 
+    Int32 AvailableBytes 'get ' : 
+    Boolean IsNeedingInput 'get ' : 
+  Methods:
+    PeekBits(Int32): PrivateScope, Public, HideBySig
+    DropBits(Int32): PrivateScope, Public, HideBySig
+    GetBits(Int32): PrivateScope, Public, HideBySig
+    get_AvailableBits(): PrivateScope, Public, HideBySig, SpecialName
+    get_AvailableBytes(): PrivateScope, Public, HideBySig, SpecialName
+    SkipToByteBoundary(): PrivateScope, Public, HideBySig
+    get_IsNeedingInput(): PrivateScope, Public, HideBySig, SpecialName
+    CopyBytes(Byte[], Int32, Int32): PrivateScope, Public, HideBySig
+    Reset(): PrivateScope, Public, HideBySig
+    SetInput(Byte[], Int32, Int32): PrivateScope, Public, HideBySig
+Class ICSharpCode.SharpZipLib.Zip.Compression.Deflater: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 BEST_COMPRESSION = 9 : Public, Static, Literal, HasDefault
+    Int32 BEST_SPEED = 1 : Public, Static, Literal, HasDefault
+    Int32 DEFAULT_COMPRESSION = -1 : Public, Static, Literal, HasDefault
+    Int32 NO_COMPRESSION = 0 : Public, Static, Literal, HasDefault
+    Int32 DEFLATED = 8 : Public, Static, Literal, HasDefault
+  Properties:
+    Int32 Adler 'get ' : 
+    Int64 TotalIn 'get ' : 
+    Int64 TotalOut 'get ' : 
+    Boolean IsFinished 'get ' : 
+    Boolean IsNeedingInput 'get ' : 
+  Methods:
+    Reset(): PrivateScope, Public, HideBySig
+    get_Adler(): PrivateScope, Public, HideBySig, SpecialName
+    get_TotalIn(): PrivateScope, Public, HideBySig, SpecialName
+    get_TotalOut(): PrivateScope, Public, HideBySig, SpecialName
+    Flush(): PrivateScope, Public, HideBySig
+    Finish(): PrivateScope, Public, HideBySig
+    get_IsFinished(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsNeedingInput(): PrivateScope, Public, HideBySig, SpecialName
+    SetInput(Byte[]): PrivateScope, Public, HideBySig
+    SetInput(Byte[], Int32, Int32): PrivateScope, Public, HideBySig
+    SetLevel(Int32): PrivateScope, Public, HideBySig
+    GetLevel(): PrivateScope, Public, HideBySig
+    SetStrategy(DeflateStrategy): PrivateScope, Public, HideBySig
+    Deflate(Byte[]): PrivateScope, Public, HideBySig
+    Deflate(Byte[], Int32, Int32): PrivateScope, Public, HideBySig
+    SetDictionary(Byte[]): PrivateScope, Public, HideBySig
+    SetDictionary(Byte[], Int32, Int32): PrivateScope, Public, HideBySig
+Class ICSharpCode.SharpZipLib.Zip.Compression.DeflaterConstants: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 MAX_BLOCK_SIZE : Public, Static
+    Int32[] GOOD_LENGTH : Public, Static
+    Int32[] MAX_LAZY : Public, Static
+    Int32[] NICE_LENGTH : Public, Static
+    Int32[] MAX_CHAIN : Public, Static
+    Int32[] COMPR_FUNC : Public, Static
+    Boolean DEBUGGING = False : Public, Static, Literal, HasDefault
+    Int32 STORED_BLOCK = 0 : Public, Static, Literal, HasDefault
+    Int32 STATIC_TREES = 1 : Public, Static, Literal, HasDefault
+    Int32 DYN_TREES = 2 : Public, Static, Literal, HasDefault
+    Int32 PRESET_DICT = 32 : Public, Static, Literal, HasDefault
+    Int32 DEFAULT_MEM_LEVEL = 8 : Public, Static, Literal, HasDefault
+    Int32 MAX_MATCH = 258 : Public, Static, Literal, HasDefault
+    Int32 MIN_MATCH = 3 : Public, Static, Literal, HasDefault
+    Int32 MAX_WBITS = 15 : Public, Static, Literal, HasDefault
+    Int32 WSIZE = 32768 : Public, Static, Literal, HasDefault
+    Int32 WMASK = 32767 : Public, Static, Literal, HasDefault
+    Int32 HASH_BITS = 15 : Public, Static, Literal, HasDefault
+    Int32 HASH_SIZE = 32768 : Public, Static, Literal, HasDefault
+    Int32 HASH_MASK = 32767 : Public, Static, Literal, HasDefault
+    Int32 HASH_SHIFT = 5 : Public, Static, Literal, HasDefault
+    Int32 MIN_LOOKAHEAD = 262 : Public, Static, Literal, HasDefault
+    Int32 MAX_DIST = 32506 : Public, Static, Literal, HasDefault
+    Int32 PENDING_BUF_SIZE = 65536 : Public, Static, Literal, HasDefault
+    Int32 DEFLATE_STORED = 0 : Public, Static, Literal, HasDefault
+    Int32 DEFLATE_FAST = 1 : Public, Static, Literal, HasDefault
+    Int32 DEFLATE_SLOW = 2 : Public, Static, Literal, HasDefault
+Struct ICSharpCode.SharpZipLib.Zip.Compression.DeflateStrategy: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ICSharpCode.SharpZipLib.Zip.Compression.DeflateStrategy Default = 0 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.Compression.DeflateStrategy Filtered = 1 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.Compression.DeflateStrategy HuffmanOnly = 2 : Public, Static, Literal, HasDefault
+Class ICSharpCode.SharpZipLib.Zip.Compression.DeflaterEngine: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ICSharpCode.SharpZipLib.Zip.Compression.DeflaterConstants
+    Void .ctor(ICSharpCode.SharpZipLib.Zip.Compression.DeflaterPending): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 Adler 'get ' : 
+    Int64 TotalIn 'get ' : 
+    ICSharpCode.SharpZipLib.Zip.Compression.DeflateStrategy Strategy 'get set' : 
+  Methods:
+    Deflate(Boolean, Boolean): PrivateScope, Public, HideBySig
+    SetInput(Byte[], Int32, Int32): PrivateScope, Public, HideBySig
+    NeedsInput(): PrivateScope, Public, HideBySig
+    SetDictionary(Byte[], Int32, Int32): PrivateScope, Public, HideBySig
+    Reset(): PrivateScope, Public, HideBySig
+    ResetAdler(): PrivateScope, Public, HideBySig
+    get_Adler(): PrivateScope, Public, HideBySig, SpecialName
+    get_TotalIn(): PrivateScope, Public, HideBySig, SpecialName
+    get_Strategy(): PrivateScope, Public, HideBySig, SpecialName
+    set_Strategy(DeflateStrategy): PrivateScope, Public, HideBySig, SpecialName
+    SetLevel(Int32): PrivateScope, Public, HideBySig
+    FillWindow(): PrivateScope, Public, HideBySig
+Class ICSharpCode.SharpZipLib.Zip.Compression.DeflaterHuffman: AutoLayout, AnsiClass, Class, Public
+    Void .ctor(ICSharpCode.SharpZipLib.Zip.Compression.DeflaterPending): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    ICSharpCode.SharpZipLib.Zip.Compression.DeflaterPending pending : Public
+  Methods:
+    Reset(): PrivateScope, Public, HideBySig
+    SendAllTrees(Int32): PrivateScope, Public, HideBySig
+    CompressBlock(): PrivateScope, Public, HideBySig
+    FlushStoredBlock(Byte[], Int32, Int32, Boolean): PrivateScope, Public, HideBySig
+    FlushBlock(Byte[], Int32, Int32, Boolean): PrivateScope, Public, HideBySig
+    IsFull(): PrivateScope, Public, HideBySig
+    TallyLit(Int32): PrivateScope, Public, HideBySig
+    TallyDist(Int32, Int32): PrivateScope, Public, HideBySig
+    BitReverse(Int32): PrivateScope, Public, Static, HideBySig
+Class ICSharpCode.SharpZipLib.Zip.Compression.PendingBuffer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 BitCount 'get ' : 
+    Boolean IsFlushed 'get ' : 
+  Methods:
+    Reset(): PrivateScope, Public, HideBySig
+    WriteByte(Int32): PrivateScope, Public, HideBySig
+    WriteShort(Int32): PrivateScope, Public, HideBySig
+    WriteInt(Int32): PrivateScope, Public, HideBySig
+    WriteBlock(Byte[], Int32, Int32): PrivateScope, Public, HideBySig
+    get_BitCount(): PrivateScope, Public, HideBySig, SpecialName
+    AlignToByte(): PrivateScope, Public, HideBySig
+    WriteBits(Int32, Int32): PrivateScope, Public, HideBySig
+    WriteShortMSB(Int32): PrivateScope, Public, HideBySig
+    get_IsFlushed(): PrivateScope, Public, HideBySig, SpecialName
+    Flush(Byte[], Int32, Int32): PrivateScope, Public, HideBySig
+    ToByteArray(): PrivateScope, Public, HideBySig
+Class ICSharpCode.SharpZipLib.Zip.Compression.DeflaterPending: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ICSharpCode.SharpZipLib.Zip.Compression.PendingBuffer
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class ICSharpCode.SharpZipLib.Zip.Compression.Inflater: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean IsNeedingInput 'get ' : 
+    Boolean IsNeedingDictionary 'get ' : 
+    Boolean IsFinished 'get ' : 
+    Int32 Adler 'get ' : 
+    Int64 TotalOut 'get ' : 
+    Int64 TotalIn 'get ' : 
+    Int32 RemainingInput 'get ' : 
+  Methods:
+    Reset(): PrivateScope, Public, HideBySig
+    SetDictionary(Byte[]): PrivateScope, Public, HideBySig
+    SetDictionary(Byte[], Int32, Int32): PrivateScope, Public, HideBySig
+    SetInput(Byte[]): PrivateScope, Public, HideBySig
+    SetInput(Byte[], Int32, Int32): PrivateScope, Public, HideBySig
+    Inflate(Byte[]): PrivateScope, Public, HideBySig
+    Inflate(Byte[], Int32, Int32): PrivateScope, Public, HideBySig
+    get_IsNeedingInput(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsNeedingDictionary(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsFinished(): PrivateScope, Public, HideBySig, SpecialName
+    get_Adler(): PrivateScope, Public, HideBySig, SpecialName
+    get_TotalOut(): PrivateScope, Public, HideBySig, SpecialName
+    get_TotalIn(): PrivateScope, Public, HideBySig, SpecialName
+    get_RemainingInput(): PrivateScope, Public, HideBySig, SpecialName
+Class ICSharpCode.SharpZipLib.Zip.Compression.InflaterHuffmanTree: AutoLayout, AnsiClass, Class, Public
+    Void .ctor(Byte[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    ICSharpCode.SharpZipLib.Zip.Compression.InflaterHuffmanTree defLitLenTree : Public, Static
+    ICSharpCode.SharpZipLib.Zip.Compression.InflaterHuffmanTree defDistTree : Public, Static
+  Methods:
+    GetSymbol(StreamManipulator): PrivateScope, Public, HideBySig
+Class ICSharpCode.SharpZipLib.Zip.FastZipEvents: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    ICSharpCode.SharpZipLib.Core.ProcessDirectoryHandler ProcessDirectory : Public
+    ICSharpCode.SharpZipLib.Core.ProcessFileHandler ProcessFile : Public
+    ICSharpCode.SharpZipLib.Core.ProgressHandler Progress : Public
+    ICSharpCode.SharpZipLib.Core.CompletedFileHandler CompletedFile : Public
+    ICSharpCode.SharpZipLib.Core.DirectoryFailureHandler DirectoryFailure : Public
+    ICSharpCode.SharpZipLib.Core.FileFailureHandler FileFailure : Public
+  Properties:
+    System.TimeSpan ProgressInterval 'get set' : 
+  Methods:
+    OnDirectoryFailure(String, Exception): PrivateScope, Public, HideBySig
+    OnFileFailure(String, Exception): PrivateScope, Public, HideBySig
+    OnProcessFile(String): PrivateScope, Public, HideBySig
+    OnCompletedFile(String): PrivateScope, Public, HideBySig
+    OnProcessDirectory(String, Boolean): PrivateScope, Public, HideBySig
+    get_ProgressInterval(): PrivateScope, Public, HideBySig, SpecialName
+    set_ProgressInterval(TimeSpan): PrivateScope, Public, HideBySig, SpecialName
+Class ICSharpCode.SharpZipLib.Zip.FastZip: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(ICSharpCode.SharpZipLib.Zip.FastZipEvents): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean CreateEmptyDirectories 'get set' : 
+    System.String Password 'get set' : 
+    ICSharpCode.SharpZipLib.Core.INameTransform NameTransform 'get set' : 
+    ICSharpCode.SharpZipLib.Zip.IEntryFactory EntryFactory 'get set' : 
+    ICSharpCode.SharpZipLib.Zip.UseZip64 UseZip64 'get set' : 
+    Boolean RestoreDateTimeOnExtract 'get set' : 
+    Boolean RestoreAttributesOnExtract 'get set' : 
+  Methods:
+    get_CreateEmptyDirectories(): PrivateScope, Public, HideBySig, SpecialName
+    set_CreateEmptyDirectories(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Password(): PrivateScope, Public, HideBySig, SpecialName
+    set_Password(String): PrivateScope, Public, HideBySig, SpecialName
+    get_NameTransform(): PrivateScope, Public, HideBySig, SpecialName
+    set_NameTransform(INameTransform): PrivateScope, Public, HideBySig, SpecialName
+    get_EntryFactory(): PrivateScope, Public, HideBySig, SpecialName
+    set_EntryFactory(IEntryFactory): PrivateScope, Public, HideBySig, SpecialName
+    get_UseZip64(): PrivateScope, Public, HideBySig, SpecialName
+    set_UseZip64(UseZip64): PrivateScope, Public, HideBySig, SpecialName
+    get_RestoreDateTimeOnExtract(): PrivateScope, Public, HideBySig, SpecialName
+    set_RestoreDateTimeOnExtract(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_RestoreAttributesOnExtract(): PrivateScope, Public, HideBySig, SpecialName
+    set_RestoreAttributesOnExtract(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    CreateZip(String, String, Boolean, String, String): PrivateScope, Public, HideBySig
+    CreateZip(String, String, Boolean, String): PrivateScope, Public, HideBySig
+    CreateZip(Stream, String, Boolean, String, String): PrivateScope, Public, HideBySig
+    ExtractZip(String, String, String): PrivateScope, Public, HideBySig
+    ExtractZip(String, String, Overwrite, ConfirmOverwriteDelegate, String, String, Boolean): PrivateScope, Public, HideBySig
+    ExtractZip(Stream, String, Overwrite, ConfirmOverwriteDelegate, String, String, Boolean, Boolean): PrivateScope, Public, HideBySig
+Struct ICSharpCode.SharpZipLib.Zip.FastZip+Overwrite: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Overwrite Prompt = 0 : Public, Static, Literal, HasDefault
+    Overwrite Never = 1 : Public, Static, Literal, HasDefault
+    Overwrite Always = 2 : Public, Static, Literal, HasDefault
+Class ICSharpCode.SharpZipLib.Zip.FastZip+ConfirmOverwriteDelegate: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(String, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface ICSharpCode.SharpZipLib.Zip.IEntryFactory: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    ICSharpCode.SharpZipLib.Core.INameTransform NameTransform 'get set' : 
+  Methods:
+    MakeFileEntry(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    MakeFileEntry(String, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    MakeDirectoryEntry(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    MakeDirectoryEntry(String, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_NameTransform(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_NameTransform(INameTransform): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Class ICSharpCode.SharpZipLib.Zip.WindowsNameTransform: AutoLayout, AnsiClass, Class, Public
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICSharpCode.SharpZipLib.Core.INameTransform
+  Properties:
+    System.String BaseDirectory 'get set' : 
+    Boolean TrimIncomingPaths 'get set' : 
+    Char Replacement 'get set' : 
+  Methods:
+    get_BaseDirectory(): PrivateScope, Public, HideBySig, SpecialName
+    set_BaseDirectory(String): PrivateScope, Public, HideBySig, SpecialName
+    get_TrimIncomingPaths(): PrivateScope, Public, HideBySig, SpecialName
+    set_TrimIncomingPaths(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    TransformDirectory(String): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    TransformFile(String): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    IsValidName(String): PrivateScope, Public, Static, HideBySig
+    MakeValidName(String, Char): PrivateScope, Public, Static, HideBySig
+    get_Replacement(): PrivateScope, Public, HideBySig, SpecialName
+    set_Replacement(Char): PrivateScope, Public, HideBySig, SpecialName
+Struct ICSharpCode.SharpZipLib.Zip.UseZip64: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ICSharpCode.SharpZipLib.Zip.UseZip64 Off = 0 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.UseZip64 On = 1 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.UseZip64 Dynamic = 2 : Public, Static, Literal, HasDefault
+Struct ICSharpCode.SharpZipLib.Zip.CompressionMethod: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ICSharpCode.SharpZipLib.Zip.CompressionMethod Stored = 0 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.CompressionMethod Deflated = 8 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.CompressionMethod Deflate64 = 9 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.CompressionMethod BZip2 = 11 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.CompressionMethod WinZipAES = 99 : Public, Static, Literal, HasDefault
+Struct ICSharpCode.SharpZipLib.Zip.EncryptionAlgorithm: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ICSharpCode.SharpZipLib.Zip.EncryptionAlgorithm None = 0 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.EncryptionAlgorithm PkzipClassic = 1 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.EncryptionAlgorithm Des = 26113 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.EncryptionAlgorithm RC2 = 26114 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.EncryptionAlgorithm TripleDes168 = 26115 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.EncryptionAlgorithm TripleDes112 = 26121 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.EncryptionAlgorithm Aes128 = 26126 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.EncryptionAlgorithm Aes192 = 26127 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.EncryptionAlgorithm Aes256 = 26128 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.EncryptionAlgorithm RC2Corrected = 26370 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.EncryptionAlgorithm Blowfish = 26400 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.EncryptionAlgorithm Twofish = 26401 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.EncryptionAlgorithm RC4 = 26625 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.EncryptionAlgorithm Unknown = 65535 : Public, Static, Literal, HasDefault
+Struct ICSharpCode.SharpZipLib.Zip.GeneralBitFlags: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ICSharpCode.SharpZipLib.Zip.GeneralBitFlags Encrypted = 1 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.GeneralBitFlags Method = 6 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.GeneralBitFlags Descriptor = 8 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.GeneralBitFlags ReservedPKware4 = 16 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.GeneralBitFlags Patched = 32 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.GeneralBitFlags StrongEncryption = 64 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.GeneralBitFlags Unused7 = 128 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.GeneralBitFlags Unused8 = 256 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.GeneralBitFlags Unused9 = 512 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.GeneralBitFlags Unused10 = 1024 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.GeneralBitFlags UnicodeText = 2048 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.GeneralBitFlags EnhancedCompress = 4096 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.GeneralBitFlags HeaderMasked = 8192 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.GeneralBitFlags ReservedPkware14 = 16384 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.GeneralBitFlags ReservedPkware15 = 32768 : Public, Static, Literal, HasDefault
+Class ICSharpCode.SharpZipLib.Zip.ZipConstants: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  Fields:
+    Int32 VersionMadeBy = 51 : Public, Static, Literal, HasDefault
+    Int32 VERSION_MADE_BY = 51 : Public, Static, Literal, HasDefault (Obsolete)
+    Int32 VersionStrongEncryption = 50 : Public, Static, Literal, HasDefault
+    Int32 VERSION_STRONG_ENCRYPTION = 50 : Public, Static, Literal, HasDefault (Obsolete)
+    Int32 VERSION_AES = 51 : Public, Static, Literal, HasDefault
+    Int32 VersionZip64 = 45 : Public, Static, Literal, HasDefault
+    Int32 LocalHeaderBaseSize = 30 : Public, Static, Literal, HasDefault
+    Int32 LOCHDR = 30 : Public, Static, Literal, HasDefault (Obsolete)
+    Int32 Zip64DataDescriptorSize = 24 : Public, Static, Literal, HasDefault
+    Int32 DataDescriptorSize = 16 : Public, Static, Literal, HasDefault
+    Int32 EXTHDR = 16 : Public, Static, Literal, HasDefault (Obsolete)
+    Int32 CentralHeaderBaseSize = 46 : Public, Static, Literal, HasDefault
+    Int32 CENHDR = 46 : Public, Static, Literal, HasDefault (Obsolete)
+    Int32 EndOfCentralRecordBaseSize = 22 : Public, Static, Literal, HasDefault
+    Int32 ENDHDR = 22 : Public, Static, Literal, HasDefault (Obsolete)
+    Int32 CryptoHeaderSize = 12 : Public, Static, Literal, HasDefault
+    Int32 CRYPTO_HEADER_SIZE = 12 : Public, Static, Literal, HasDefault (Obsolete)
+    Int32 LocalHeaderSignature = 67324752 : Public, Static, Literal, HasDefault
+    Int32 LOCSIG = 67324752 : Public, Static, Literal, HasDefault (Obsolete)
+    Int32 SpanningSignature = 134695760 : Public, Static, Literal, HasDefault
+    Int32 SPANNINGSIG = 134695760 : Public, Static, Literal, HasDefault (Obsolete)
+    Int32 SpanningTempSignature = 808471376 : Public, Static, Literal, HasDefault
+    Int32 SPANTEMPSIG = 808471376 : Public, Static, Literal, HasDefault (Obsolete)
+    Int32 DataDescriptorSignature = 134695760 : Public, Static, Literal, HasDefault
+    Int32 EXTSIG = 134695760 : Public, Static, Literal, HasDefault (Obsolete)
+    Int32 CENSIG = 33639248 : Public, Static, Literal, HasDefault (Obsolete)
+    Int32 CentralHeaderSignature = 33639248 : Public, Static, Literal, HasDefault
+    Int32 Zip64CentralFileHeaderSignature = 101075792 : Public, Static, Literal, HasDefault
+    Int32 CENSIG64 = 101075792 : Public, Static, Literal, HasDefault (Obsolete)
+    Int32 Zip64CentralDirLocatorSignature = 117853008 : Public, Static, Literal, HasDefault
+    Int32 ArchiveExtraDataSignature = 117853008 : Public, Static, Literal, HasDefault
+    Int32 CentralHeaderDigitalSignature = 84233040 : Public, Static, Literal, HasDefault
+    Int32 CENDIGITALSIG = 84233040 : Public, Static, Literal, HasDefault (Obsolete)
+    Int32 EndOfCentralDirectorySignature = 101010256 : Public, Static, Literal, HasDefault
+    Int32 ENDSIG = 101010256 : Public, Static, Literal, HasDefault (Obsolete)
+  Properties:
+    Int32 DefaultCodePage 'get set' : 
+  Methods:
+    get_DefaultCodePage(): PrivateScope, Public, Static, HideBySig, SpecialName
+    set_DefaultCodePage(Int32): PrivateScope, Public, Static, HideBySig, SpecialName
+    ConvertToString(Byte[], Int32): PrivateScope, Public, Static, HideBySig
+    ConvertToString(Byte[]): PrivateScope, Public, Static, HideBySig
+    ConvertToStringExt(Int32, Byte[], Int32): PrivateScope, Public, Static, HideBySig
+    ConvertToStringExt(Int32, Byte[]): PrivateScope, Public, Static, HideBySig
+    ConvertToArray(String): PrivateScope, Public, Static, HideBySig
+    ConvertToArray(Int32, String): PrivateScope, Public, Static, HideBySig
+Struct ICSharpCode.SharpZipLib.Zip.HostSystemID: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ICSharpCode.SharpZipLib.Zip.HostSystemID Msdos = 0 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.HostSystemID Amiga = 1 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.HostSystemID OpenVms = 2 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.HostSystemID Unix = 3 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.HostSystemID VMCms = 4 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.HostSystemID AtariST = 5 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.HostSystemID OS2 = 6 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.HostSystemID Macintosh = 7 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.HostSystemID ZSystem = 8 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.HostSystemID Cpm = 9 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.HostSystemID WindowsNT = 10 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.HostSystemID MVS = 11 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.HostSystemID Vse = 12 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.HostSystemID AcornRisc = 13 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.HostSystemID Vfat = 14 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.HostSystemID AlternateMvs = 15 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.HostSystemID BeOS = 16 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.HostSystemID Tandem = 17 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.HostSystemID OS400 = 18 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.HostSystemID OSX = 19 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.HostSystemID WinZipAES = 99 : Public, Static, Literal, HasDefault
+Class ICSharpCode.SharpZipLib.Zip.ZipEntry: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(ICSharpCode.SharpZipLib.Zip.ZipEntry): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName (Obsolete)
+  Interfaces:
+    System.ICloneable
+  Properties:
+    Boolean HasCrc 'get ' : 
+    Boolean IsCrypted 'get set' : 
+    Boolean IsUnicodeText 'get set' : 
+    Int32 Flags 'get set' : 
+    Int64 ZipFileIndex 'get set' : 
+    Int64 Offset 'get set' : 
+    Int32 ExternalFileAttributes 'get set' : 
+    Int32 VersionMadeBy 'get ' : 
+    Boolean IsDOSEntry 'get ' : 
+    Int32 HostSystem 'get set' : 
+    Int32 Version 'get ' : 
+    Boolean CanDecompress 'get ' : 
+    Boolean LocalHeaderRequiresZip64 'get ' : 
+    Boolean CentralHeaderRequiresZip64 'get ' : 
+    Int64 DosTime 'get set' : 
+    System.DateTime DateTime 'get set' : 
+    System.String Name 'get ' : 
+    Int64 Size 'get set' : 
+    Int64 CompressedSize 'get set' : 
+    Int64 Crc  'get set' : 
+    ICSharpCode.SharpZipLib.Zip.CompressionMethod CompressionMethod 'get set' : 
+    Byte[] ExtraData 'get set' : 
+    Int32 AESKeySize 'get set' : 
+    System.String Comment 'get set' : 
+    Boolean IsDirectory 'get ' : 
+    Boolean IsFile 'get ' : 
+  Methods:
+    get_HasCrc(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsCrypted(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsCrypted(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IsUnicodeText(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsUnicodeText(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Flags(): PrivateScope, Public, HideBySig, SpecialName
+    set_Flags(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_ZipFileIndex(): PrivateScope, Public, HideBySig, SpecialName
+    set_ZipFileIndex(Int64): PrivateScope, Public, HideBySig, SpecialName
+    get_Offset(): PrivateScope, Public, HideBySig, SpecialName
+    set_Offset(Int64): PrivateScope, Public, HideBySig, SpecialName
+    get_ExternalFileAttributes(): PrivateScope, Public, HideBySig, SpecialName
+    set_ExternalFileAttributes(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_VersionMadeBy(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsDOSEntry(): PrivateScope, Public, HideBySig, SpecialName
+    get_HostSystem(): PrivateScope, Public, HideBySig, SpecialName
+    set_HostSystem(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Version(): PrivateScope, Public, HideBySig, SpecialName
+    get_CanDecompress(): PrivateScope, Public, HideBySig, SpecialName
+    ForceZip64(): PrivateScope, Public, HideBySig
+    IsZip64Forced(): PrivateScope, Public, HideBySig
+    get_LocalHeaderRequiresZip64(): PrivateScope, Public, HideBySig, SpecialName
+    get_CentralHeaderRequiresZip64(): PrivateScope, Public, HideBySig, SpecialName
+    get_DosTime(): PrivateScope, Public, HideBySig, SpecialName
+    set_DosTime(Int64): PrivateScope, Public, HideBySig, SpecialName
+    get_DateTime(): PrivateScope, Public, HideBySig, SpecialName
+    set_DateTime(DateTime): PrivateScope, Public, HideBySig, SpecialName
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    get_Size(): PrivateScope, Public, HideBySig, SpecialName
+    set_Size(Int64): PrivateScope, Public, HideBySig, SpecialName
+    get_CompressedSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_CompressedSize(Int64): PrivateScope, Public, HideBySig, SpecialName
+    get_Crc(): PrivateScope, Public, HideBySig, SpecialName
+    set_Crc(Int64): PrivateScope, Public, HideBySig, SpecialName
+    get_CompressionMethod(): PrivateScope, Public, HideBySig, SpecialName
+    set_CompressionMethod(CompressionMethod): PrivateScope, Public, HideBySig, SpecialName
+    get_ExtraData(): PrivateScope, Public, HideBySig, SpecialName
+    set_ExtraData(Byte[]): PrivateScope, Public, HideBySig, SpecialName
+    get_AESKeySize(): PrivateScope, Public, HideBySig, SpecialName
+    set_AESKeySize(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Comment(): PrivateScope, Public, HideBySig, SpecialName
+    set_Comment(String): PrivateScope, Public, HideBySig, SpecialName
+    get_IsDirectory(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsFile(): PrivateScope, Public, HideBySig, SpecialName
+    IsCompressionMethodSupported(): PrivateScope, Public, HideBySig
+    Clone(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    IsCompressionMethodSupported(CompressionMethod): PrivateScope, Public, Static, HideBySig
+    CleanName(String): PrivateScope, Public, Static, HideBySig
+Class ICSharpCode.SharpZipLib.Zip.ZipEntryFactory: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(TimeSetting): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.DateTime): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICSharpCode.SharpZipLib.Zip.IEntryFactory
+  Properties:
+    ICSharpCode.SharpZipLib.Core.INameTransform NameTransform 'get set' : 
+    TimeSetting Setting 'get set' : 
+    System.DateTime FixedDateTime 'get set' : 
+    Int32 GetAttributes 'get set' : 
+    Int32 SetAttributes 'get set' : 
+    Boolean IsUnicodeText 'get set' : 
+  Methods:
+    get_NameTransform(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_NameTransform(INameTransform): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Setting(): PrivateScope, Public, HideBySig, SpecialName
+    set_Setting(TimeSetting): PrivateScope, Public, HideBySig, SpecialName
+    get_FixedDateTime(): PrivateScope, Public, HideBySig, SpecialName
+    set_FixedDateTime(DateTime): PrivateScope, Public, HideBySig, SpecialName
+    get_GetAttributes(): PrivateScope, Public, HideBySig, SpecialName
+    set_GetAttributes(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_SetAttributes(): PrivateScope, Public, HideBySig, SpecialName
+    set_SetAttributes(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_IsUnicodeText(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsUnicodeText(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    MakeFileEntry(String): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    MakeFileEntry(String, Boolean): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    MakeDirectoryEntry(String): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    MakeDirectoryEntry(String, Boolean): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Struct ICSharpCode.SharpZipLib.Zip.ZipEntryFactory+TimeSetting: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    TimeSetting LastWriteTime = 0 : Public, Static, Literal, HasDefault
+    TimeSetting LastWriteTimeUtc = 1 : Public, Static, Literal, HasDefault
+    TimeSetting CreateTime = 2 : Public, Static, Literal, HasDefault
+    TimeSetting CreateTimeUtc = 3 : Public, Static, Literal, HasDefault
+    TimeSetting LastAccessTime = 4 : Public, Static, Literal, HasDefault
+    TimeSetting LastAccessTimeUtc = 5 : Public, Static, Literal, HasDefault
+    TimeSetting Fixed = 6 : Public, Static, Literal, HasDefault
+Class ICSharpCode.SharpZipLib.Zip.ZipException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :ICSharpCode.SharpZipLib.SharpZipBaseException
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Interface ICSharpCode.SharpZipLib.Zip.ITaggedData: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    Int16 TagID 'get ' : 
+  Methods:
+    get_TagID(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    SetData(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetData(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class ICSharpCode.SharpZipLib.Zip.RawTaggedData: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Int16): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICSharpCode.SharpZipLib.Zip.ITaggedData
+  Properties:
+    Int16 TagID 'get set' : 
+    Byte[] Data 'get set' : 
+  Methods:
+    get_TagID(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_TagID(Int16): PrivateScope, Public, HideBySig, SpecialName
+    SetData(Byte[], Int32, Int32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    GetData(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_Data(): PrivateScope, Public, HideBySig, SpecialName
+    set_Data(Byte[]): PrivateScope, Public, HideBySig, SpecialName
+Class ICSharpCode.SharpZipLib.Zip.ExtendedUnixData: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICSharpCode.SharpZipLib.Zip.ITaggedData
+  Properties:
+    Int16 TagID 'get ' : 
+    System.DateTime ModificationTime 'get set' : 
+    System.DateTime AccessTime 'get set' : 
+    System.DateTime CreateTime 'get set' : 
+  Methods:
+    get_TagID(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    SetData(Byte[], Int32, Int32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    GetData(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    IsValidValue(DateTime): PrivateScope, Public, Static, HideBySig
+    get_ModificationTime(): PrivateScope, Public, HideBySig, SpecialName
+    set_ModificationTime(DateTime): PrivateScope, Public, HideBySig, SpecialName
+    get_AccessTime(): PrivateScope, Public, HideBySig, SpecialName
+    set_AccessTime(DateTime): PrivateScope, Public, HideBySig, SpecialName
+    get_CreateTime(): PrivateScope, Public, HideBySig, SpecialName
+    set_CreateTime(DateTime): PrivateScope, Public, HideBySig, SpecialName
+Struct ICSharpCode.SharpZipLib.Zip.ExtendedUnixData+Flags: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Byte value__ : Public, SpecialName, RTSpecialName
+    Flags ModificationTime = 1 : Public, Static, Literal, HasDefault
+    Flags AccessTime = 2 : Public, Static, Literal, HasDefault
+    Flags CreateTime = 4 : Public, Static, Literal, HasDefault
+Class ICSharpCode.SharpZipLib.Zip.NTTaggedData: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICSharpCode.SharpZipLib.Zip.ITaggedData
+  Properties:
+    Int16 TagID 'get ' : 
+    System.DateTime LastModificationTime 'get set' : 
+    System.DateTime CreateTime 'get set' : 
+    System.DateTime LastAccessTime 'get set' : 
+  Methods:
+    get_TagID(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    SetData(Byte[], Int32, Int32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    GetData(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    IsValidValue(DateTime): PrivateScope, Public, Static, HideBySig
+    get_LastModificationTime(): PrivateScope, Public, HideBySig, SpecialName
+    set_LastModificationTime(DateTime): PrivateScope, Public, HideBySig, SpecialName
+    get_CreateTime(): PrivateScope, Public, HideBySig, SpecialName
+    set_CreateTime(DateTime): PrivateScope, Public, HideBySig, SpecialName
+    get_LastAccessTime(): PrivateScope, Public, HideBySig, SpecialName
+    set_LastAccessTime(DateTime): PrivateScope, Public, HideBySig, SpecialName
+Class ICSharpCode.SharpZipLib.Zip.ZipExtraData: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Byte[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    Int32 Length 'get ' : 
+    Int32 ValueLength 'get ' : 
+    Int32 CurrentReadIndex 'get ' : 
+    Int32 UnreadCount 'get ' : 
+  Methods:
+    GetEntryData(): PrivateScope, Public, HideBySig
+    Clear(): PrivateScope, Public, HideBySig
+    get_Length(): PrivateScope, Public, HideBySig, SpecialName
+    GetStreamForTag(Int32): PrivateScope, Public, HideBySig
+    get_ValueLength(): PrivateScope, Public, HideBySig, SpecialName
+    get_CurrentReadIndex(): PrivateScope, Public, HideBySig, SpecialName
+    get_UnreadCount(): PrivateScope, Public, HideBySig, SpecialName
+    Find(Int32): PrivateScope, Public, HideBySig
+    AddEntry(ITaggedData): PrivateScope, Public, HideBySig
+    AddEntry(Int32, Byte[]): PrivateScope, Public, HideBySig
+    StartNewEntry(): PrivateScope, Public, HideBySig
+    AddNewEntry(Int32): PrivateScope, Public, HideBySig
+    AddData(Byte): PrivateScope, Public, HideBySig
+    AddData(Byte[]): PrivateScope, Public, HideBySig
+    AddLeShort(Int32): PrivateScope, Public, HideBySig
+    AddLeInt(Int32): PrivateScope, Public, HideBySig
+    AddLeLong(Int64): PrivateScope, Public, HideBySig
+    Delete(Int32): PrivateScope, Public, HideBySig
+    ReadLong(): PrivateScope, Public, HideBySig
+    ReadInt(): PrivateScope, Public, HideBySig
+    ReadShort(): PrivateScope, Public, HideBySig
+    ReadByte(): PrivateScope, Public, HideBySig
+    Skip(Int32): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class ICSharpCode.SharpZipLib.Zip.KeysRequiredEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, Byte[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String FileName 'get ' : 
+    Byte[] Key 'get set' : 
+  Methods:
+    get_FileName(): PrivateScope, Public, HideBySig, SpecialName
+    get_Key(): PrivateScope, Public, HideBySig, SpecialName
+    set_Key(Byte[]): PrivateScope, Public, HideBySig, SpecialName
+Struct ICSharpCode.SharpZipLib.Zip.TestStrategy: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ICSharpCode.SharpZipLib.Zip.TestStrategy FindFirstError = 0 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.TestStrategy FindAllErrors = 1 : Public, Static, Literal, HasDefault
+Struct ICSharpCode.SharpZipLib.Zip.TestOperation: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ICSharpCode.SharpZipLib.Zip.TestOperation Initialising = 0 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.TestOperation EntryHeader = 1 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.TestOperation EntryData = 2 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.TestOperation EntryComplete = 3 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.TestOperation MiscellaneousTests = 4 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.TestOperation Complete = 5 : Public, Static, Literal, HasDefault
+Class ICSharpCode.SharpZipLib.Zip.TestStatus: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(ICSharpCode.SharpZipLib.Zip.ZipFile): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    ICSharpCode.SharpZipLib.Zip.TestOperation Operation 'get ' : 
+    ICSharpCode.SharpZipLib.Zip.ZipFile File 'get ' : 
+    ICSharpCode.SharpZipLib.Zip.ZipEntry Entry 'get ' : 
+    Int32 ErrorCount 'get ' : 
+    Int64 BytesTested 'get ' : 
+    Boolean EntryValid 'get ' : 
+  Methods:
+    get_Operation(): PrivateScope, Public, HideBySig, SpecialName
+    get_File(): PrivateScope, Public, HideBySig, SpecialName
+    get_Entry(): PrivateScope, Public, HideBySig, SpecialName
+    get_ErrorCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_BytesTested(): PrivateScope, Public, HideBySig, SpecialName
+    get_EntryValid(): PrivateScope, Public, HideBySig, SpecialName
+Class ICSharpCode.SharpZipLib.Zip.ZipTestResultHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(TestStatus, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(TestStatus, String, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Struct ICSharpCode.SharpZipLib.Zip.FileUpdateMode: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ICSharpCode.SharpZipLib.Zip.FileUpdateMode Safe = 0 : Public, Static, Literal, HasDefault
+    ICSharpCode.SharpZipLib.Zip.FileUpdateMode Direct = 1 : Public, Static, Literal, HasDefault
+Class ICSharpCode.SharpZipLib.Zip.ZipFile: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.IO.FileStream): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.IO.Stream): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.Collections.IEnumerable
+    System.IDisposable
+  Fields:
+    KeysRequiredEventHandler KeysRequired : Public
+  Properties:
+    System.String Password 'set' : 
+    Boolean IsStreamOwner 'get set' : 
+    Boolean IsEmbeddedArchive 'get ' : 
+    Boolean IsNewArchive 'get ' : 
+    System.String ZipFileComment 'get ' : 
+    System.String Name 'get ' : 
+    Int32 Size 'get ' :  (Obsolete)
+    Int64 Count 'get ' : 
+    ICSharpCode.SharpZipLib.Zip.ZipEntry EntryByIndex [Int32] 'get ' : 
+    ICSharpCode.SharpZipLib.Core.INameTransform NameTransform 'get set' : 
+    ICSharpCode.SharpZipLib.Zip.IEntryFactory EntryFactory 'get set' : 
+    Int32 BufferSize 'get set' : 
+    Boolean IsUpdating 'get ' : 
+    ICSharpCode.SharpZipLib.Zip.UseZip64 UseZip64 'get set' : 
+  Methods:
+    set_Password(String): PrivateScope, Public, HideBySig, SpecialName
+    Close(): PrivateScope, Public, HideBySig
+    Create(String): PrivateScope, Public, Static, HideBySig
+    Create(Stream): PrivateScope, Public, Static, HideBySig
+    get_IsStreamOwner(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsStreamOwner(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IsEmbeddedArchive(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsNewArchive(): PrivateScope, Public, HideBySig, SpecialName
+    get_ZipFileComment(): PrivateScope, Public, HideBySig, SpecialName
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    get_Size(): PrivateScope, Public, HideBySig, SpecialName
+    get_Count(): PrivateScope, Public, HideBySig, SpecialName
+    get_EntryByIndex(Int32): PrivateScope, Public, HideBySig, SpecialName
+    GetEnumerator(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    FindEntry(String, Boolean): PrivateScope, Public, HideBySig
+    GetEntry(String): PrivateScope, Public, HideBySig
+    GetInputStream(ZipEntry): PrivateScope, Public, HideBySig
+    GetInputStream(Int64): PrivateScope, Public, HideBySig
+    TestArchive(Boolean): PrivateScope, Public, HideBySig
+    TestArchive(Boolean, TestStrategy, ZipTestResultHandler): PrivateScope, Public, HideBySig
+    get_NameTransform(): PrivateScope, Public, HideBySig, SpecialName
+    set_NameTransform(INameTransform): PrivateScope, Public, HideBySig, SpecialName
+    get_EntryFactory(): PrivateScope, Public, HideBySig, SpecialName
+    set_EntryFactory(IEntryFactory): PrivateScope, Public, HideBySig, SpecialName
+    get_BufferSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_BufferSize(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_IsUpdating(): PrivateScope, Public, HideBySig, SpecialName
+    get_UseZip64(): PrivateScope, Public, HideBySig, SpecialName
+    set_UseZip64(UseZip64): PrivateScope, Public, HideBySig, SpecialName
+    BeginUpdate(IArchiveStorage, IDynamicDataSource): PrivateScope, Public, HideBySig
+    BeginUpdate(IArchiveStorage): PrivateScope, Public, HideBySig
+    BeginUpdate(): PrivateScope, Public, HideBySig
+    CommitUpdate(): PrivateScope, Public, HideBySig
+    AbortUpdate(): PrivateScope, Public, HideBySig
+    SetComment(String): PrivateScope, Public, HideBySig
+    Add(String, CompressionMethod, Boolean): PrivateScope, Public, HideBySig
+    Add(String, CompressionMethod): PrivateScope, Public, HideBySig
+    Add(String): PrivateScope, Public, HideBySig
+    Add(String, String): PrivateScope, Public, HideBySig
+    Add(IStaticDataSource, String): PrivateScope, Public, HideBySig
+    Add(IStaticDataSource, String, CompressionMethod): PrivateScope, Public, HideBySig
+    Add(IStaticDataSource, String, CompressionMethod, Boolean): PrivateScope, Public, HideBySig
+    Add(ZipEntry): PrivateScope, Public, HideBySig
+    AddDirectory(String): PrivateScope, Public, HideBySig
+    Delete(String): PrivateScope, Public, HideBySig
+    Delete(ZipEntry): PrivateScope, Public, HideBySig
+Class ICSharpCode.SharpZipLib.Zip.ZipFile+KeysRequiredEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Object, KeysRequiredEventArgs): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(Object, KeysRequiredEventArgs, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface ICSharpCode.SharpZipLib.Zip.IStaticDataSource: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    GetSource(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface ICSharpCode.SharpZipLib.Zip.IDynamicDataSource: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    GetSource(ZipEntry, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class ICSharpCode.SharpZipLib.Zip.StaticDiskDataSource: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICSharpCode.SharpZipLib.Zip.IStaticDataSource
+  Methods:
+    GetSource(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class ICSharpCode.SharpZipLib.Zip.DynamicDiskDataSource: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICSharpCode.SharpZipLib.Zip.IDynamicDataSource
+  Methods:
+    GetSource(ZipEntry, String): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Interface ICSharpCode.SharpZipLib.Zip.IArchiveStorage: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Properties:
+    ICSharpCode.SharpZipLib.Zip.FileUpdateMode UpdateMode 'get ' : 
+  Methods:
+    get_UpdateMode(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetTemporaryOutput(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ConvertTemporaryToFinal(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    MakeTemporaryCopy(Stream): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OpenForDirectUpdate(Stream): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Dispose(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class ICSharpCode.SharpZipLib.Zip.BaseArchiveStorage: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  Interfaces:
+    ICSharpCode.SharpZipLib.Zip.IArchiveStorage
+  Properties:
+    ICSharpCode.SharpZipLib.Zip.FileUpdateMode UpdateMode 'get ' : 
+  Methods:
+    GetTemporaryOutput(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ConvertTemporaryToFinal(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    MakeTemporaryCopy(Stream): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OpenForDirectUpdate(Stream): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Dispose(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_UpdateMode(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Class ICSharpCode.SharpZipLib.Zip.DiskArchiveStorage: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ICSharpCode.SharpZipLib.Zip.BaseArchiveStorage
+    Void .ctor(ICSharpCode.SharpZipLib.Zip.ZipFile, ICSharpCode.SharpZipLib.Zip.FileUpdateMode): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(ICSharpCode.SharpZipLib.Zip.ZipFile): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetTemporaryOutput(): PrivateScope, Public, Virtual, HideBySig
+    ConvertTemporaryToFinal(): PrivateScope, Public, Virtual, HideBySig
+    MakeTemporaryCopy(Stream): PrivateScope, Public, Virtual, HideBySig
+    OpenForDirectUpdate(Stream): PrivateScope, Public, Virtual, HideBySig
+    Dispose(): PrivateScope, Public, Virtual, HideBySig
+Class ICSharpCode.SharpZipLib.Zip.MemoryArchiveStorage: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ICSharpCode.SharpZipLib.Zip.BaseArchiveStorage
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(ICSharpCode.SharpZipLib.Zip.FileUpdateMode): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.IO.MemoryStream FinalStream 'get ' : 
+  Methods:
+    get_FinalStream(): PrivateScope, Public, HideBySig, SpecialName
+    GetTemporaryOutput(): PrivateScope, Public, Virtual, HideBySig
+    ConvertTemporaryToFinal(): PrivateScope, Public, Virtual, HideBySig
+    MakeTemporaryCopy(Stream): PrivateScope, Public, Virtual, HideBySig
+    OpenForDirectUpdate(Stream): PrivateScope, Public, Virtual, HideBySig
+    Dispose(): PrivateScope, Public, Virtual, HideBySig
+Class ICSharpCode.SharpZipLib.Zip.DescriptorData: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int64 CompressedSize 'get set' : 
+    Int64 Size 'get set' : 
+    Int64 Crc  'get set' : 
+  Methods:
+    get_CompressedSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_CompressedSize(Int64): PrivateScope, Public, HideBySig, SpecialName
+    get_Size(): PrivateScope, Public, HideBySig, SpecialName
+    set_Size(Int64): PrivateScope, Public, HideBySig, SpecialName
+    get_Crc(): PrivateScope, Public, HideBySig, SpecialName
+    set_Crc(Int64): PrivateScope, Public, HideBySig, SpecialName
+Class ICSharpCode.SharpZipLib.Zip.ZipInputStream: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ICSharpCode.SharpZipLib.Zip.Compression.Streams.InflaterInputStream
+    Void .ctor(System.IO.Stream): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.IO.Stream, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Password 'get set' : 
+    Boolean CanDecompressEntry 'get ' : 
+    Int32 Available 'get ' : 
+    Int64 Length 'get ' : 
+  Methods:
+    get_Password(): PrivateScope, Public, HideBySig, SpecialName
+    set_Password(String): PrivateScope, Public, HideBySig, SpecialName
+    get_CanDecompressEntry(): PrivateScope, Public, HideBySig, SpecialName
+    GetNextEntry(): PrivateScope, Public, HideBySig
+    CloseEntry(): PrivateScope, Public, HideBySig
+    get_Available(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_Length(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    ReadByte(): PrivateScope, Public, Virtual, HideBySig
+    Read(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+    Close(): PrivateScope, Public, Virtual, HideBySig
+Class ICSharpCode.SharpZipLib.Zip.ZipNameTransform: AutoLayout, AnsiClass, Class, Public
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICSharpCode.SharpZipLib.Core.INameTransform
+  Properties:
+    System.String TrimPrefix 'get set' : 
+  Methods:
+    TransformDirectory(String): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    TransformFile(String): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_TrimPrefix(): PrivateScope, Public, HideBySig, SpecialName
+    set_TrimPrefix(String): PrivateScope, Public, HideBySig, SpecialName
+    IsValidName(String, Boolean): PrivateScope, Public, Static, HideBySig
+    IsValidName(String): PrivateScope, Public, Static, HideBySig
+Class ICSharpCode.SharpZipLib.Zip.ZipOutputStream: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ICSharpCode.SharpZipLib.Zip.Compression.Streams.DeflaterOutputStream
+    Void .ctor(System.IO.Stream): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.IO.Stream, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean IsFinished 'get ' : 
+    ICSharpCode.SharpZipLib.Zip.UseZip64 UseZip64 'get set' : 
+  Methods:
+    get_IsFinished(): PrivateScope, Public, HideBySig, SpecialName
+    SetComment(String): PrivateScope, Public, HideBySig
+    SetLevel(Int32): PrivateScope, Public, HideBySig
+    GetLevel(): PrivateScope, Public, HideBySig
+    get_UseZip64(): PrivateScope, Public, HideBySig, SpecialName
+    set_UseZip64(UseZip64): PrivateScope, Public, HideBySig, SpecialName
+    PutNextEntry(ZipEntry): PrivateScope, Public, HideBySig
+    CloseEntry(): PrivateScope, Public, HideBySig
+    Write(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+    Finish(): PrivateScope, Public, Virtual, HideBySig

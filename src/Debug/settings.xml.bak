@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<NSFAnalyze>
+	<OutputFormat>csv</OutputFormat>
+	<OutputFile>C:\tbnscanner_design.csv</OutputFile>
+	<Server>CN=FTWWDLDAD001/O=RRD/C=US</Server>
+	<Database>bnsf\dwu.nsf</Database>
+	<Include>
+		<Enabled>yes</Enabled>
+		<Recurse>no</Recurse>
+		<FolderList>
+			<Folder>website</Folder>
+			<Folder>stuff</Folder>
+		</FolderList>
+	</Include>
+	<Exclude>
+		<Enabled>no</Enabled>
+	</Exclude>
+	<KeywordList>
+		<Keyword>searchtoken1</Keyword>
+		<Keyword>searchtoken2</Keyword>
+	</KeywordList>
+	<AnalyzeData>no</AnalyzeData>
+	<ExactMatch>yes</ExactMatch>
+</NSFAnalyze>

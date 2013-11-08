@@ -1,0 +1,82 @@
+  NSFAnalyzer.About.resources - Embedded, ContainedInManifestFile, 
+  NSFAnalyzer.dlgDatabaseList.resources - Embedded, ContainedInManifestFile, 
+  NSFAnalyzer.dlgServerList.resources - Embedded, ContainedInManifestFile, 
+  NSFAnalyzer.NSFAnalyzerForm.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly NSFAnalyzer, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class NSFAnalyzer.ConfigurationTool: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean IsAutoLaunching 'get set' : 
+  Methods:
+    Read(String): PrivateScope, Public, HideBySig
+    Write(String): PrivateScope, Public, HideBySig
+    GetFileFormat(): PrivateScope, Public, HideBySig
+    SetFileFormat(String): PrivateScope, Public, HideBySig
+    GetFilePath(): PrivateScope, Public, HideBySig
+    SetFilePath(String): PrivateScope, Public, HideBySig
+    GetServer(): PrivateScope, Public, HideBySig
+    SetServer(String): PrivateScope, Public, HideBySig
+    GetDatabase(): PrivateScope, Public, HideBySig
+    SetDatabase(String): PrivateScope, Public, HideBySig
+    GetIncludeFlag(): PrivateScope, Public, HideBySig
+    SetIncludeFlag(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    GetExcludeFlag(): PrivateScope, Public, HideBySig
+    SetExcludeFlag(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    GetIncludeRecurseFlag(): PrivateScope, Public, HideBySig
+    SetIncludeRecurseFlag(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    GetExcludeRecurseFlag(): PrivateScope, Public, HideBySig
+    SetExcludeRecurseFlag(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    GetIsDesignOnly(): PrivateScope, Public, HideBySig
+    SetIsDesignOnly(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    get_IsAutoLaunching(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsAutoLaunching(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    GetIsExactMatch(): PrivateScope, Public, HideBySig
+    SetIsExactMatch(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    GetIncludeFolders(): PrivateScope, Public, HideBySig
+    SetIncludeFolders(ListBox): PrivateScope, Public, HideBySig
+    GetExcludeFolders(): PrivateScope, Public, HideBySig
+    SetExcludeFolders(ListBox): PrivateScope, Public, HideBySig
+    GetSearchKeys(): PrivateScope, Public, HideBySig
+    SetSearchKeys(ListBox): PrivateScope, Public, HideBySig
+    UpdateStatusField(String): PrivateScope, Public, HideBySig
+    SetStatusField(ListBox): PrivateScope, Public, HideBySig
+Class NSFAnalyzer.dlgDatabaseList: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(System.Windows.Forms.TextBox, System.Windows.Forms.Button, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Windows.Forms.TextBox, System.Windows.Forms.Button): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Collections.Hashtable dir_table : Public
+  Methods:
+    setDatabases(vector<std::basic_string<char\,std::char_traits<char>\,std::allocator<char> >\,std::allocator<std::basic_string<char\,std::char_traits<char>\,std::allocator<char> > > >* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+    FillTree(vector<std::basic_string<char\,std::char_traits<char>\,std::allocator<char> >\,std::allocator<std::basic_string<char\,std::char_traits<char>\,std::allocator<char> > > >* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+Class NSFAnalyzer.dlgServerList: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(System.Windows.Forms.TextBox, System.Windows.Forms.Button, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Windows.Forms.TextBox, System.Windows.Forms.Button): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    setServers(vector<std::basic_string<char\,std::char_traits<char>\,std::allocator<char> >\,std::allocator<std::basic_string<char\,std::char_traits<char>\,std::allocator<char> > > >* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+Class NSFAnalyzer.About: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class NSFAnalyzer.NSFAnalyzerForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

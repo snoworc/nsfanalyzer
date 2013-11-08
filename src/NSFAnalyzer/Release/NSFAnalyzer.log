@@ -1,0 +1,52 @@
+﻿Build started 2/7/2013 2:09:40 PM.
+     1>Project "C:\NSFAnalyzer\NSFAnalyzer_Source\NSFAnalyzer\NSFAnalyzer.vcxproj" on node 3 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\capi\ln853\notesapi\include /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /AI"C:\Program Files (x86)\Windows Kits\8.0\References\CommonConfiguration\Neutral" /Zi /clr /nologo /W3 /WX- /O2 /Oy- /GL /D W32 /D _MBCS /EHa /MD /Zp1 /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Release\NSFAnalyzer.pch" /Fo"Release\\" /Fd"Release\vc110.pdb" /TP /FU"C:\NSFAnalyzer\NSFAnalyzer_Source\net-20\ICSharpCode.SharpZipLib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\capi\ln853\notesapi\include /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /AI"C:\Program Files (x86)\Windows Kits\8.0\References\CommonConfiguration\Neutral" /Zi /clr /nologo /W3 /WX- /O2 /Oy- /GL /D W32 /D _MBCS /EHa /MD /Zp1 /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /TP /FU"C:\NSFAnalyzer\NSFAnalyzer_Source\net-20\ICSharpCode.SharpZipLib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib agent_data.cpp AssemblyInfo.cpp composite_data.cpp Configuration.cpp dlgDatabaseList.cpp dlgServerList.cpp generic_data.cpp ListboxHandler.cpp NoteClass.cpp NoteClassTable.cpp NSFAnalyzer.cpp ScanIterator.cpp ScanResult.cpp search_core.cpp About.cpp
+         agent_data.cpp
+         AssemblyInfo.cpp
+         composite_data.cpp
+         Configuration.cpp
+         dlgDatabaseList.cpp
+         dlgServerList.cpp
+         generic_data.cpp
+         ListboxHandler.cpp
+         NoteClass.cpp
+         NoteClassTable.cpp
+         NSFAnalyzer.cpp
+         ScanIterator.cpp
+         ScanResult.cpp
+         search_core.cpp
+         About.cpp
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\capi\ln853\notesapi\include /Zi /clr /nologo /W3 /WX- /O2 /Oy- /GL /D W32 /D _MBCS /EHa /MD /Zp1 /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /TP /analyze- /errorReport:prompt "C:\Users\BNICHOL\AppData\Local\Temp\.NETFramework,Version=v4.0.AssemblyAttributes.cpp"
+         .NETFramework,Version=v4.0.AssemblyAttributes.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\rc.exe /l"0x0409" /nologo /fo"Release\app.res" app.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\NSFAnalyzer\NSFAnalyzer_Source\Release\NSFAnalyzer.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:C:\capi\ln853\notesapi\lib\mswin32 /ASSEMBLYRESOURCE:Release\NSFAnalyzer.About.resources /ASSEMBLYRESOURCE:Release\NSFAnalyzer.dlgDatabaseList.resources /ASSEMBLYRESOURCE:Release\NSFAnalyzer.dlgServerList.resources /ASSEMBLYRESOURCE:Release\NSFAnalyzer.NSFAnalyzerForm.resources /MANIFEST /MANIFESTUAC:"level='requireAdministrator' uiAccess='false'" /manifest:embed /manifestinput:NSFAnalyzer.manifest /DEBUG /PDB:"C:\NSFAnalyzer\NSFAnalyzer_Source\Release\NSFAnalyzer.pdb" /SUBSYSTEM:WINDOWS /LTCG /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /SAFESEH Release\app.res
+         Release\agent_data.obj
+         Release\AssemblyInfo.obj
+         Release\composite_data.obj
+         Release\Configuration.obj
+         Release\dlgDatabaseList.obj
+         Release\dlgServerList.obj
+         Release\generic_data.obj
+         Release\ListboxHandler.obj
+         Release\NoteClass.obj
+         Release\NoteClassTable.obj
+         Release\NSFAnalyzer.obj
+         Release\ScanIterator.obj
+         Release\ScanResult.obj
+         Release\search_core.obj
+         Release\stdafx.obj
+         Release\About.obj
+         "Release\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
+         LINK : /LTCG specified but no code generation required; remove /LTCG from the link command line to improve linker performance
+         NSFAnalyzer.vcxproj -> C:\NSFAnalyzer\NSFAnalyzer_Source\Release\NSFAnalyzer.exe
+     1>Done Building Project "C:\NSFAnalyzer\NSFAnalyzer_Source\NSFAnalyzer\NSFAnalyzer.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:11.62
