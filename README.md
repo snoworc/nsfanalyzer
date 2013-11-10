@@ -34,6 +34,7 @@ All of the configuration settings correspond to the user interface options. To s
 
 XML Configuration Layout
 ===========
+ <nowiki>
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <NSFAnalyze>
         <OutputFormat>csv</OutputFormat>
@@ -65,7 +66,7 @@ XML Configuration Layout
         <AutoLaunch>yes</AutoLaunch>
 	<FindMultipleTokensInNote>yes</FindMultipleTokensInNote>
 </NSFAnalyze>
-
+ </nowiki>
 
 Description
 
