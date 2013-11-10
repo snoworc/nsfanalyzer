@@ -34,7 +34,7 @@ All of the configuration settings correspond to the user interface options. To s
 
 XML Configuration Layout
 ===========
- <nowiki>
+```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <NSFAnalyze>
         <OutputFormat>csv</OutputFormat>
@@ -66,65 +66,65 @@ XML Configuration Layout
         <AutoLaunch>yes</AutoLaunch>
 	<FindMultipleTokensInNote>yes</FindMultipleTokensInNote>
 </NSFAnalyze>
- </nowiki>
+```
 
 Description
 
-<OutputFormat>: Specifies output file format.
+```<OutputFormat>```: Specifies output file format.
 
 Valid values are:
 
     * html
     * csv 
 
-<OutputFile>: Specifies output file location.
+```<OutputFile>```: Specifies output file location.
 
-<Server>: Specifies the server to scan.
+```<Server>```: Specifies the server to scan.
 
-<Database>: Specifies the database to scan. Leave blank to scan all databases on the server.
+```<Database>```: Specifies the database to scan. Leave blank to scan all databases on the server.
 
-<Include> / <Exclude> sections: The configuration file may have either one enabled, but not both.
+```<Include>``` / ```<Exclude>``` sections: The configuration file may have either one enabled, but not both.
 
-<Enabled>: Indicates the state of the checkbox of the option
-
-Valid values are:
-
-    * yes
-    * no 
-
-<Recurse>: Indicates the state of the checkbox of the option
+```<Enabled>```: Indicates the state of the checkbox of the option
 
 Valid values are:
 
     * yes
     * no 
 
-<FolderList>: Specifies the folders to either only include or exclude.
-
-<KeywordList>: Specifies the keywords to search for in the database design. e.g.
-
-<AnalyzeData>: Indicates whether or not to additionally scan all data in the database.
+```<Recurse>```: Indicates the state of the checkbox of the option
 
 Valid values are:
 
     * yes
     * no 
 
-<ExactMatch>: Indicates whether or not to search for exact matches only. If part of the source code is not in the design, such as %include "\\mycodePath\mycode.lss", it is considered a Possible Match because the analyzer cannot review the code. Possible matches are recorded so the developer doing a scan knows which dependencies s/he needs to manually review.
+```<FolderList>```: Specifies the folders to either only include or exclude.
+
+```<KeywordList>```: Specifies the keywords to search for in the database design. e.g.
+
+```<AnalyzeData>```: Indicates whether or not to additionally scan all data in the database.
 
 Valid values are:
 
     * yes
     * no 
 
-<AutoLaunch>: Indicates whether or not to launch open the output file when the scan is done.
+```<ExactMatch>```: Indicates whether or not to search for exact matches only. If part of the source code is not in the design, such as %include "\\mycodePath\mycode.lss", it is considered a Possible Match because the analyzer cannot review the code. Possible matches are recorded so the developer doing a scan knows which dependencies s/he needs to manually review.
 
 Valid values are:
 
     * yes
     * no 
 
-<FindMultipleTokensInNote>: Indicates whether or not to stop scanning a note after at least one item (or item part) matches a search token. 
+```<AutoLaunch>```: Indicates whether or not to launch open the output file when the scan is done.
+
+Valid values are:
+
+    * yes
+    * no 
+
+```<FindMultipleTokensInNote>```: Indicates whether or not to stop scanning a note after at least one item (or item part) matches a search token. 
 
 Example: Form has a field called FieldA and FieldB. Both have a formula of "[Developers]". If this setting is no, you will only get one "hit" for the form in your search results. The scan finds either FieldA or FieldB first, records the hit, and skips to the next note.
 
